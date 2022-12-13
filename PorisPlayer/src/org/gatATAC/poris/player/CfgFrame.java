@@ -370,7 +370,7 @@ public class CfgFrame extends javax.swing.JFrame {
     public javax.swing.JButton aboutButton;
     public javax.swing.JPanel changePanel;
     private javax.swing.JButton commitButton;
-    private javax.swing.JButton discardButton;
+    public javax.swing.JButton discardButton;
     private javax.swing.JPanel filePanel;
     public javax.swing.JPanel mainPanel;
     private javax.swing.JScrollPane mainScroll;
