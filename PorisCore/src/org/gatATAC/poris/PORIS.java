@@ -23,20 +23,20 @@ import org.gatATAC.poris.MVC.Observer;
  * @author txinto
  *
  */
-public class SNode extends Model {
+public class PORIS extends Model {
 
     /**
      * 
      */
-    protected static ArrayList<SNode> instanceList = new ArrayList<SNode>();
+    protected static ArrayList<PORIS> instanceList = new ArrayList<PORIS>();
     /**
      * 
      */
-    protected ArrayList<SNode> destinations;
+    protected ArrayList<PORIS> destinations;
     /**
      * 
      */
-    protected ArrayList<SNode> sources;
+    protected ArrayList<PORIS> sources;
     private String label;
     private ArrayList<SNodeAttribute> attributes;
     private int id;
@@ -47,10 +47,10 @@ public class SNode extends Model {
      * 
      * @param name
      */
-    public SNode(String name) {
+    public PORIS(String name) {
         super(name);
-        destinations = new ArrayList<SNode>();
-        sources = new ArrayList<SNode>();
+        destinations = new ArrayList<PORIS>();
+        sources = new ArrayList<PORIS>();
         attributes = new ArrayList<SNodeAttribute>();
         instanceList.add(this);
         this.label = name;
@@ -119,7 +119,7 @@ public class SNode extends Model {
      */
     public Class<?> getThisPackageClass(Class<?> tagClass) {
         Class<?> ret = tagClass;
-        while (ret.getPackage() != SNode.class.getPackage()) {
+        while (ret.getPackage() != PORIS.class.getPackage()) {
             ret = ret.getSuperclass();
         }
         return ret;
@@ -171,7 +171,7 @@ public class SNode extends Model {
      * 
      * @param child
      */
-    public void addDestination(SNode child) {
+    public void addDestination(PORIS child) {
         if (!destinations.contains(child)) {
             destinations.add(child);
             if (!child.sources.contains(this)) {
@@ -185,7 +185,7 @@ public class SNode extends Model {
      * 
      * @param parent
      */
-    public void addSource(SNode parent) {
+    public void addSource(PORIS parent) {
         if (!sources.contains(parent)) {
             sources.add(parent);
             if (!parent.destinations.contains(this)) {
@@ -210,11 +210,11 @@ public class SNode extends Model {
      * 
      * @return
      */
-    public ArrayList<SNode> getDestinations() {
+    public ArrayList<PORIS> getDestinations() {
         return destinations;
     }
 
-    SNode getDestinationFromName(String name) {
+    PORIS getDestinationFromName(String name) {
         for (int i = 0; i < this.destinations.size(); i++) {
             if (this.destinations.get(i).isValidFromStr(name)) {
                 return this.destinations.get(i);
@@ -223,7 +223,7 @@ public class SNode extends Model {
         return null;
     }
 
-    SNode getSourceFromName(String name) {
+    PORIS getSourceFromName(String name) {
         for (int i = 0; i < this.sources.size(); i++) {
             if (this.sources.get(i).isValidFromStr(name)) {
                 return this.sources.get(i);
@@ -236,7 +236,7 @@ public class SNode extends Model {
      * 
      * @return
      */
-    public static ArrayList<SNode> getInstanceList() {
+    public static ArrayList<PORIS> getInstanceList() {
         return instanceList;
     }
 
@@ -245,8 +245,8 @@ public class SNode extends Model {
      * @param name
      * @return
      */
-    public static SNode getInstance(String name) {
-        SNode ret = null;
+    public static PORIS getInstance(String name) {
+        PORIS ret = null;
 
         for (int i = 0; i < instanceList.size(); i++) {
             if (instanceList.get(i).getName().equals(name)) {
@@ -380,7 +380,7 @@ public class SNode extends Model {
      * @param list
      * @return
      */
-    public boolean subTree(ArrayList<SNode> list) {
+    public boolean subTree(ArrayList<PORIS> list) {
         boolean ret = true;
         if (!list.contains(this)) {
             for (int i = 0; i < destinations.size() && ret; i++) {
@@ -399,7 +399,7 @@ public class SNode extends Model {
      * @param instanceName
      * @return
      */
-    public static SNode getSNodeInstance(Class<?> clase, String instanceName) {
+    public static PORIS getSNodeInstance(Class<?> clase, String instanceName) {
         Class<?>[] intArgsClass = new Class[]{String.class};
         Object[] intArgs = new Object[]{instanceName};
         Constructor<?> intArgsConstructor;
@@ -408,7 +408,7 @@ public class SNode extends Model {
             intArgsConstructor = clase.getConstructor(intArgsClass);
 
             try {
-                return (SNode) intArgsConstructor.newInstance(intArgs);
+                return (PORIS) intArgsConstructor.newInstance(intArgs);
             } catch (InstantiationException e) {
                 System.err.println("SNode.getSNodeInstance"+e.getLocalizedMessage());
             } catch (IllegalAccessException e) {
@@ -423,7 +423,7 @@ public class SNode extends Model {
         }
         return null;
     }
-    static HashMap<String, SNode> xmlLoaderHashMap = new HashMap<String, SNode>();
+    static HashMap<String, PORIS> xmlLoaderHashMap = new HashMap<String, PORIS>();
 
     /**
      * 
@@ -451,8 +451,8 @@ public class SNode extends Model {
      * @param clase
      * @return
      */
-    public ArrayList<SNode> getFromListByClass(ArrayList<SNode> list, Class<?> clase) {
-        ArrayList<SNode> ret = new ArrayList<SNode>();
+    public ArrayList<PORIS> getFromListByClass(ArrayList<PORIS> list, Class<?> clase) {
+        ArrayList<PORIS> ret = new ArrayList<PORIS>();
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).isDescendantOf(clase)) {
                 ret.add(list.get(i));
@@ -468,7 +468,7 @@ public class SNode extends Model {
      * @param name
      * @return
      */
-    public SNode getFromListByClassAndName(ArrayList<SNode> list, Class<?> clase, String name) {
+    public PORIS getFromListByClassAndName(ArrayList<PORIS> list, Class<?> clase, String name) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).isDescendantOf(clase)) {
                 if (list.get(i).getName().equals(name)) {
@@ -551,7 +551,7 @@ public class SNode extends Model {
                 Node destNode = childDests.item(i);
                 if (destNode.getNodeName().equals("destination")) {
                     String destId = Utils.getTextContent((Element) getChildNodeWithName(destNode, "id"));
-                    SNode newDest = (SNode) xmlLoaderHashMap.get(destId);
+                    PORIS newDest = (PORIS) xmlLoaderHashMap.get(destId);
                     if (newDest != null) {
                         this.addDestination(newDest);
                     }
@@ -568,8 +568,8 @@ public class SNode extends Model {
      * @param node
      * @return
      */
-    public static SNode fromXML(Class<?> clase, Node node) {
-        SNode ret = getSNodeInstance(clase, "idle");
+    public static PORIS fromXML(Class<?> clase, Node node) {
+        PORIS ret = getSNodeInstance(clase, "idle");
         if (ret.loadFromXML(node)) {
             return ret;
         } else {
@@ -584,7 +584,7 @@ public class SNode extends Model {
      * @param name
      * @return
      */
-    public static SNode createInstanceFromClass(
+    public static PORIS createInstanceFromClass(
             Class<?> clase, String name) {
         Class<?>[] intArgsClass = new Class[]{clase};
         Constructor<?> intArgsConstructor;
@@ -594,7 +594,7 @@ public class SNode extends Model {
             Object[] intArgs = new Object[]{name};
 
             try {
-                return (SNode) intArgsConstructor.newInstance(intArgs);
+                return (PORIS) intArgsConstructor.newInstance(intArgs);
             } catch (InstantiationException e) {
                 System.err.println(e.getLocalizedMessage());
             } catch (IllegalAccessException e) {
@@ -609,7 +609,7 @@ public class SNode extends Model {
             System.err.println("BaseModel.createInstanceFromClass: " + e.getLocalizedMessage());
         }
 
-        return new SNode(name);
+        return new PORIS(name);
     }
 
     /**
@@ -618,23 +618,23 @@ public class SNode extends Model {
      * @param clase
      * @return
      */
-    public static SNode getBaseModelFromNodeAndClassName(
+    public static PORIS getBaseModelFromNodeAndClassName(
             Node node, String clase) {
-        SNode ret = null;
+        PORIS ret = null;
 
         try {
             Class<?> thisClass = Class.forName(clase);
             try {
 
 
-                if (BaseClass.isClassDescendantOf(thisClass, SNode.class)) {
+                if (BaseClass.isClassDescendantOf(thisClass, PORIS.class)) {
                     Method[] methods = thisClass.getMethods();
                     boolean found = false;
                     for (int i2 = 0;
                             i2 < methods.length && !found; i2++) {
                         if (methods[i2].getName().equals("fromXML")) {
                             Object[] invokeArgs = {node};
-                            ret = (SNode) methods[i2].invoke(null, invokeArgs);
+                            ret = (PORIS) methods[i2].invoke(null, invokeArgs);
                             if (ret == null) {
                                 System.err.println("Falló la funcion fromXML con clase " + thisClass.getSimpleName() + " y nodo " + node.getNodeName());
                             }

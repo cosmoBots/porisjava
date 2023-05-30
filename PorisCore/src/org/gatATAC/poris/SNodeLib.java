@@ -18,7 +18,7 @@ import org.w3c.dom.NodeList;
  */
 public class SNodeLib extends Model {
 
-    private final ArrayList<SNode> nodeList;
+    private final ArrayList<PORIS> nodeList;
 
     /**
      * 
@@ -61,7 +61,7 @@ public class SNodeLib extends Model {
      * 
      * @return
      */
-    public SNode last() {
+    public PORIS last() {
         return this.nodeList.get(nodeList.size() - 1);
     }
 
@@ -69,7 +69,7 @@ public class SNodeLib extends Model {
      * 
      * @param items
      */
-    public void addSNodes(ArrayList<SNode> items) {
+    public void addSNodes(ArrayList<PORIS> items) {
         for (int i = 0; i < items.size(); i++) {
             this.nodeList.add(items.get(i));
         }
@@ -81,7 +81,7 @@ public class SNodeLib extends Model {
      * @param node
      * @return
      */
-    public ArrayList<SNode> fromXML(Node node) {
+    public ArrayList<PORIS> fromXML(Node node) {
         nodeList.clear();
         NodeList instanceNodes = node.getChildNodes();
 
@@ -89,7 +89,7 @@ public class SNodeLib extends Model {
             String instanceNodeName = instanceNodes.item(i).getNodeName();
             //System.out.println("Compruebo el child " + instanceNodeName);
             Node instanceNode = instanceNodes.item(i);
-            Node instanceTypeNode = SNode.getChildNodeWithName(instanceNode, "type");
+            Node instanceTypeNode = PORIS.getChildNodeWithName(instanceNode, "type");
             if (instanceTypeNode != null) {
                 //System.out.println("Tiene el atributo type!!!" + instanceTypeNode);
                 String instanceClassName = instanceTypeNode.getTextContent();
@@ -98,7 +98,7 @@ public class SNodeLib extends Model {
                     /* Parche, intentar que no haya que poner el path a mano */
                     Class nodeClass = Class.forName("org.gatATAC.poris." + instanceClassName);
                     if (nodeClass != null) {
-                        SNode instance = SNode.fromXML(nodeClass, instanceNodes.item(i));
+                        PORIS instance = PORIS.fromXML(nodeClass, instanceNodes.item(i));
                         if (instance != null) {
                             nodeList.add(instance);
                             //System.out.println("Cargué perfectamente " + instanceNodeName);

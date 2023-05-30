@@ -16,7 +16,7 @@ import org.w3c.dom.Node;
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.5E50B261-E2BF-A3F3-E358-904A97E7F209]
 // </editor-fold> 
-public class Cfg extends SNode {
+public class Cfg extends PORIS {
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5DE5B290-3135-1B97-632B-36674BAAE0EB]
@@ -30,7 +30,7 @@ public class Cfg extends SNode {
     // #[regen=yes,id=DCE.4C1E880E-1DBB-9BE6-02B3-3199ADFA0075]
     // </editor-fold> 
     private Mode mode;
-    private ArrayList<SNode> possibleModes;
+    private ArrayList<PORIS> possibleModes;
     private Mode subMode;
 
     /**
@@ -191,7 +191,7 @@ public class Cfg extends SNode {
             this.hasValue = false;
         }
         for (int i = 0; i < this.model.getSubSystems().size(); i++) {
-            ArrayList<SNode> modesForChild = this.getModesForChild((SubSystem) this.model.getSubSystems().get(i));
+            ArrayList<PORIS> modesForChild = this.getModesForChild((SubSystem) this.model.getSubSystems().get(i));
 
             Cfg newCfg = new Cfg((SubSystem) this.model.getSubSystems().get(i));
             newCfg.setPossibleModes(modesForChild);
@@ -209,11 +209,11 @@ public class Cfg extends SNode {
      * 
      * @return
      */
-    public ArrayList<SNode> getPossibleModes() {
+    public ArrayList<PORIS> getPossibleModes() {
         return possibleModes;
     }
 
-    private boolean checkPossibleModesEqual(ArrayList<SNode> possibleModes, ArrayList<SNode> thisPossibleModes) {
+    private boolean checkPossibleModesEqual(ArrayList<PORIS> possibleModes, ArrayList<PORIS> thisPossibleModes) {
         boolean ret = false;
 
         if (possibleModes.size() == thisPossibleModes.size()) {
@@ -229,7 +229,7 @@ public class Cfg extends SNode {
      * 
      * @param possibleModes
      */
-    public void setPossibleModes(ArrayList<SNode> possibleModes) {
+    public void setPossibleModes(ArrayList<PORIS> possibleModes) {
         if (!checkPossibleModesEqual(possibleModes, this.possibleModes)) {
             this.possibleModes = possibleModes;
             notifyObs();
@@ -244,9 +244,9 @@ public class Cfg extends SNode {
         return hasValue;
     }
 
-    private ArrayList<SNode> getModesForChild(SubSystem child) {
+    private ArrayList<PORIS> getModesForChild(SubSystem child) {
         //System.out.println("En "+this+" y modo "+this.mode+" busco los modos para "+child);
-        ArrayList<SNode> ret = new ArrayList();
+        ArrayList<PORIS> ret = new ArrayList();
         for (int i = 0; i < this.mode.getSubModes().size(); i++) {
             Mode thisMode = (Mode) this.mode.getSubModes().get(i);
             //System.out.println("En el modo "+thisMode+" Miro el nodo "+child+" entre los sistemas "+thisMode.getSystems());
@@ -325,7 +325,7 @@ public class Cfg extends SNode {
             this.mode = mode;
             if (this.mode != null) {
                 if (this.hasValue) {
-                    ArrayList<SNode> possibleValues = this.mode.getValues();
+                    ArrayList<PORIS> possibleValues = this.mode.getValues();
                     //System.out.println("En el modo "+mode+" los posibles valores son "+possibleValues);
                     if (!possibleValues.contains(this.value)) {
                         this.value = this.mode.getDefaultValue();
@@ -409,7 +409,7 @@ public class Cfg extends SNode {
     public boolean isValidValue(Value value) {
         if (this.hasValue) {
             if (this.getMode()!= null){
-                ArrayList<SNode> possibleValues = this.getMode().getValues();
+                ArrayList<PORIS> possibleValues = this.getMode().getValues();
                 for (int i = 0; i < possibleValues.size(); i++) {
                     if (((Value) possibleValues.get(i)).isValid(value)) {
                         return true;

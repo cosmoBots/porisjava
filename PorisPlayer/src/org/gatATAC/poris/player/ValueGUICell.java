@@ -5,7 +5,7 @@
  */
 package org.gatATAC.poris.player;
 
-import org.gatATAC.poris.SNode;
+import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.Value;
 import org.gatATAC.poris.ValueDataInterface;
 import java.awt.Component;
@@ -207,7 +207,7 @@ public class ValueGUICell extends javax.swing.JPanel {
         }
     }
     
-    public void setChoices(ArrayList<SNode> choices) {
+    public void setChoices(ArrayList<PORIS> choices) {
         if (choices.size() > 0) {
             if (this.valueCell == null) {
                 if (value == null) {

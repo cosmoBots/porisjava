@@ -10,7 +10,7 @@
  */
 package org.gatATAC.poris.player;
 
-import org.gatATAC.poris.SNode;
+import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.SNodeAttribute;
 import java.util.Observable;
 import java.util.Observer;
@@ -21,11 +21,11 @@ import java.util.Observer;
  */
 public class SNodeAttributesPanel extends javax.swing.JFrame implements Observer {
 
-    private final SNode node;
+    private final PORIS node;
     private final boolean showInvisible;
 
     /** Creates new form SNodeAttributesPanel */
-    public SNodeAttributesPanel(SNode node, boolean showInvisible) {
+    public SNodeAttributesPanel(PORIS node, boolean showInvisible) {
         this.node = node;
         this.showInvisible = showInvisible;
         initComponents();
@@ -36,7 +36,7 @@ public class SNodeAttributesPanel extends javax.swing.JFrame implements Observer
     
     public SNodeAttributesPanel() {
         this.showInvisible = false;
-        node = new SNode("testNode");
+        node = new PORIS("testNode");
         node.addAttribute(new SNodeAttribute("1", "uno", true));
         node.addAttribute(new SNodeAttribute("2", "dos", false));
         node.addAttribute(new SNodeAttribute("3", "tres", true));
@@ -46,7 +46,7 @@ public class SNodeAttributesPanel extends javax.swing.JFrame implements Observer
         initRows(node);
     }
 
-    public void initRows(SNode node) {
+    public void initRows(PORIS node) {
         int maxLengthColumn1=0, maxLengthColumn2=0;
         int rowCount = node.getAttributes().size();
         int visibleRows = 0;

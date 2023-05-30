@@ -7,7 +7,7 @@ import org.gatATAC.poris.Cfg;
 import org.gatATAC.poris.player.CfgGUI;
 import org.gatATAC.poris.player.CfgFrame;
 import org.gatATAC.poris.player.CfgXMLFrame;
-import org.gatATAC.poris.SNode;
+import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.SNodeLib;
 import org.gatATAC.poris.SNodeXML;
 import org.gatATAC.poris.SubSystem;
@@ -42,8 +42,8 @@ public class SubSystemsV4View extends FrameView {
     CfgFrame cfgFrame = new CfgFrame();
     private SNodeLib sLib = new SNodeLib("systems");
     private SNodeLib cLib = new SNodeLib("configs");
-    private SNode s;
-    private SNode c;
+    private PORIS s;
+    private PORIS c;
 
     public SubSystemsV4View(SingleFrameApplication app) {
         super(app);
@@ -417,7 +417,7 @@ public class SubSystemsV4View extends FrameView {
             //System.out.println("Sus hijos son " + ((SubSystem) s).getSubSystems());
             //System.out.println("Sus modos son " + ((SubSystem) s).getModes());
             c = new Cfg(((SubSystem) s));
-            ArrayList<SNode> aux = new ArrayList();
+            ArrayList<PORIS> aux = new ArrayList();
             if (c.subTree(aux)) {
                 cLib.addSNodes(aux);
                 this.loadModelIntoResult(cLib, "Configuracion de " + c, cfgXMLCfgFrame.mainPanel, cfgXMLCfgFrame.resultPanel, 1);

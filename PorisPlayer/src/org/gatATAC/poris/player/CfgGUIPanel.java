@@ -76,7 +76,7 @@ public class CfgGUIPanel extends javax.swing.JPanel {
         this.label.setText(label + ":");
     }
 
-    public void setModeChoices(ArrayList<SNode> values) {
+    public void setModeChoices(ArrayList<PORIS> values) {
         this.mode.setModel(new DefaultComboBoxModel(values.toArray()));
     }
 

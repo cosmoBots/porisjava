@@ -1,7 +1,7 @@
 package org.gatATAC.poris.app;
 
 import org.gatATAC.poris.Cfg;
-import org.gatATAC.poris.SNode;
+import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.SNodeLib;
 import org.gatATAC.poris.SubSystem;
 import java.io.File;
@@ -156,7 +156,7 @@ public class PorisAppDelegate {
             //System.out.println("Sus hijos son " + ((SubSystem) s).getSubSystems());
             //System.out.println("Sus modos son " + ((SubSystem) s).getModes());
             config = new Cfg(system);
-            ArrayList<SNode> aux = new ArrayList();
+            ArrayList<PORIS> aux = new ArrayList();
             if (config.subTree(aux)) {
                 configLib.addSNodes(aux);
             }

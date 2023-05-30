@@ -12,7 +12,7 @@ import org.w3c.dom.Node;
  * 
  * @author txinto
  */
-public class Value extends SNode {
+public class Value extends PORIS {
 
     private String description;
     private ValueFormatter formatter;

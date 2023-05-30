@@ -4,7 +4,7 @@
  */
 package org.gatATAC.poris.test;
 
-import org.gatATAC.poris.SNode;
+import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.SNodeLib;
 import org.gatATAC.poris.SNodeXML;
 import org.gatATAC.poris.SubSystem;
@@ -20,7 +20,7 @@ public class CommandLineTest {
 
         SNodeLib sLib=new SNodeLib("systems");
         SubSystem s=GenCode.load();
-        ArrayList<SNode> aux = new ArrayList();
+        ArrayList<PORIS> aux = new ArrayList();
         if (s.subTree(aux)) {
             sLib.addSNodes(aux);
         }

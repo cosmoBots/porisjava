@@ -13,7 +13,7 @@ import org.w3c.dom.Node;
  *
  * @author osiris
  */
-public class SubSystem extends SNode {
+public class SubSystem extends PORIS {
 
     private Mode defaultMode;
 
@@ -58,7 +58,7 @@ public class SubSystem extends SNode {
      * @param child
      */
     @Override
-    public void addDestination(SNode child) {
+    public void addDestination(PORIS child) {
         if (child.isDescendantOf(Mode.class) &&
                 this.getDefaultMode()==null)
         {
@@ -88,7 +88,7 @@ public class SubSystem extends SNode {
      * 
      * @return
      */
-    public ArrayList<SNode> getModes() {
+    public ArrayList<PORIS> getModes() {
         return this.getFromListByClass(this.destinations, Mode.class);
     }
 
@@ -96,7 +96,7 @@ public class SubSystem extends SNode {
      * 
      * @return
      */
-    public ArrayList<SNode> getSubSystems() {
+    public ArrayList<PORIS> getSubSystems() {
         return this.getFromListByClass(this.destinations, SubSystem.class);
     }
 
@@ -104,7 +104,7 @@ public class SubSystem extends SNode {
      * 
      * @return
      */
-    public ArrayList<SNode> getSuperSystems() {
+    public ArrayList<PORIS> getSuperSystems() {
         return this.getFromListByClass(this.sources, SubSystem.class);
     }
 
@@ -112,7 +112,7 @@ public class SubSystem extends SNode {
      * 
      * @return
      */
-    public ArrayList<SNode> getValues() {
+    public ArrayList<PORIS> getValues() {
         return this.getFromListByClass(this.destinations, Value.class);
     }
 
