@@ -26,7 +26,7 @@ public class CfgGUI extends ViewController {
         super(cfg);
         this.showInvisible=showInvisible;
         boolean isGroupAux;
-        isGroupAux = this.getCfg().getModel().isDescendantOf(Group.class);
+        isGroupAux = this.getCfg().getModel().isDescendantOf(PORISGroup.class);
         isGroup = isGroupAux;
 
         if (showFrame) {

@@ -1312,7 +1312,7 @@
   <name>Filter</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">1</project-id>
-  <type>Group</type>
+  <type>PORISGroup</type>
   <version type="float">1.0</version>
   <destinations type="array">
     <destination type="SubSystem">
@@ -1354,7 +1354,7 @@
     <destination type="Mode">
       <id type="integer">53</id>
     </destination>
-    <destination type="Group">
+    <destination type="PORISGroup">
       <id type="integer">182</id>
     </destination>
   </destinations>
@@ -2907,7 +2907,7 @@
   <name>IPA</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">1</project-id>
-  <type>Group</type>
+  <type>PORISGroup</type>
   <version type="float">1.0</version>
   <destinations type="array">
     <destination type="SubSystem">
@@ -2937,7 +2937,7 @@
     <destination type="Mode">
       <id type="integer">240</id>
     </destination>
-    <destination type="Group">
+    <destination type="PORISGroup">
       <id type="integer">233</id>
     </destination>
   </destinations>

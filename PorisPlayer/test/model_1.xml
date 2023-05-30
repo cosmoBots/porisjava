@@ -1235,7 +1235,7 @@
   <id type="integer">182</id>
   <name>Filter</name>
   <node-type-id type="integer">3</node-type-id>
-  <type>Group</type>
+  <type>PORISGroup</type>
   <version type="float">1.0</version>
   <labels type="array"/>
   <destinations type="array">
@@ -1277,7 +1277,7 @@
     <destination type="Mode">
       <id type="integer">53</id>
     </destination>
-    <destination type="Group">
+    <destination type="PORISGroup">
       <id type="integer">182</id>
     </destination>
   </destinations>
@@ -2586,7 +2586,7 @@
   <id type="integer">233</id>
   <name>IPA</name>
   <node-type-id type="integer">3</node-type-id>
-  <type>Group</type>
+  <type>PORISGroup</type>
   <version type="float">1.0</version>
   <labels type="array"/>
   <destinations type="array">
@@ -2616,7 +2616,7 @@
     <destination type="Mode">
       <id type="integer">240</id>
     </destination>
-    <destination type="Group">
+    <destination type="PORISGroup">
       <id type="integer">233</id>
     </destination>
   </destinations>

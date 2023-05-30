@@ -159,7 +159,7 @@ public class Cfg extends PORIS {
         // FIXME: Eliminar este parche que hemos puesto aquí para que se muestre bien la interfaz
         this.setMode(null);
         //System.out.println("Estoy creando el Cfg de "+this+" con el modo por defecto "+this.getModel().getDefaultMode());
-        if (this.getModel().isDescendantOf(Group.class)) {
+        if (this.getModel().isDescendantOf(PORISGroup.class)) {
             this.subMode = this.getModel().getDefaultMode();
         } else {
             this.subMode = null;

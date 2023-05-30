@@ -11,12 +11,12 @@ import org.w3c.dom.Node;
  *
  * @author osiris
  */
-public class Group extends PORISNode {
+public class PORISGroup extends PORISNode {
     /**
      * 
      * @param name
      */
-    public Group(String name) {
+    public PORISGroup(String name) {
         super(name);
     }
 
