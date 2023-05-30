@@ -10,7 +10,7 @@ import org.gatATAC.poris.player.CfgXMLFrame;
 import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.SNodeLib;
 import org.gatATAC.poris.SNodeXML;
-import org.gatATAC.poris.SubSystem;
+import org.gatATAC.poris.PORISSys;
 import org.jdesktop.application.Action;
 import org.jdesktop.application.ResourceMap;
 import org.jdesktop.application.SingleFrameApplication;
@@ -383,7 +383,7 @@ public class SubSystemsV4View extends FrameView {
             sLib.addSNodes(aux);
             // XML output
             this.loadModelIntoResult(sLib, "Modelo de " + s, cfgXMLFrame.mainPanel, cfgXMLFrame.resultPanel, 1);
-            c = new Cfg((SubSystem) s);
+            c = new Cfg((PORISSys) s);
             aux.clear();
             if (c.subTree(aux)) {
                 cLib.addSNodes(aux);
@@ -413,10 +413,10 @@ public class SubSystemsV4View extends FrameView {
             }
             //System.out.println(" es consistente");
             this.loadModelIntoResult(sLib, "Modelo de " + s, cfgXMLFrame.mainPanel, cfgXMLFrame.resultPanel, 1);
-            //System.out.println("Sus valores son " + ((SubSystem) s).getValues());
-            //System.out.println("Sus hijos son " + ((SubSystem) s).getSubSystems());
-            //System.out.println("Sus modos son " + ((SubSystem) s).getModes());
-            c = new Cfg(((SubSystem) s));
+            //System.out.println("Sus valores son " + ((PORISSys) s).getValues());
+            //System.out.println("Sus hijos son " + ((PORISSys) s).getSubSystems());
+            //System.out.println("Sus modos son " + ((PORISSys) s).getModes());
+            c = new Cfg(((PORISSys) s));
             ArrayList<PORIS> aux = new ArrayList();
             if (c.subTree(aux)) {
                 cLib.addSNodes(aux);

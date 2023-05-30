@@ -5,7 +5,7 @@
 package org.gatATAC.poris.test;
 
 import org.gatATAC.poris.Mode;
-import org.gatATAC.poris.SubSystem;
+import org.gatATAC.poris.PORISSys;
 import org.gatATAC.poris.Value;
 import org.gatATAC.poris.ValueDoubleRange;
 
@@ -15,13 +15,13 @@ import org.gatATAC.poris.ValueDoubleRange;
  */
 public class GenCode {
 
-    public static SubSystem load() {
+    public static PORISSys load() {
 
         //// Paste here
-        SubSystem s498 = new SubSystem("TxTestInstrument");
+        PORISSys s498 = new PORISSys("TxTestInstrument");
         s498.setId(498);
         s498.setLabel("Test Instrument");
-        SubSystem s499 = new SubSystem("TxMasks");
+        PORISSys s499 = new PORISSys("TxMasks");
         s499.setId(499);
         s499.setLabel("Masks");
         Value v503 = new Value("Tx2.0");
@@ -46,7 +46,7 @@ public class GenCode {
         s499.addMode(m519);
         s499.setDefaultMode(m519);
         s498.addSubSystem(s499);
-        SubSystem s500 = new SubSystem("TxFilters");
+        PORISSys s500 = new PORISSys("TxFilters");
         s500.setId(500);
         s500.setLabel("Filters");
         Value v509 = new Value("TxRed");
@@ -70,7 +70,7 @@ public class GenCode {
         s500.addMode(m522);
         s500.setDefaultMode(m521);
         s498.addSubSystem(s500);
-        SubSystem s501 = new SubSystem("TxDispersion");
+        PORISSys s501 = new PORISSys("TxDispersion");
         s501.setId(501);
         s501.setLabel("Dispersion");
         Value v506 = new Value("TxR500");
@@ -95,10 +95,10 @@ public class GenCode {
         s501.addMode(m520);
         s501.setDefaultMode(m520);
         s498.addSubSystem(s501);
-        SubSystem s502 = new SubSystem("TxDetector");
+        PORISSys s502 = new PORISSys("TxDetector");
         s502.setId(502);
         s502.setLabel("Detector");
-        SubSystem s512 = new SubSystem("TxBinning");
+        PORISSys s512 = new PORISSys("TxBinning");
         s512.setId(512);
         s512.setLabel("Binning");
         Value v513 = new Value("Tx1x1");
@@ -135,7 +135,7 @@ public class GenCode {
         s512.addMode(m526);
         s512.setDefaultMode(m523);
         s502.addSubSystem(s512);
-        SubSystem s517 = new SubSystem("TxExpTime");
+        PORISSys s517 = new PORISSys("TxExpTime");
         s517.setId(517);
         s517.setLabel("Exposure Time");
         ValueDoubleRange v518 = new ValueDoubleRange("TxExpTimeRange", 0.01, 0.0, 1000.0);
@@ -184,7 +184,7 @@ public class GenCode {
         m529.setDefaultSubMode(m519);
         s498.addMode(m529);
         s498.setDefaultMode(m528);
-        SubSystem s = s498;
+        PORISSys s = s498;
         //// End Paste
 
         return s;

@@ -37,7 +37,7 @@ public class CfgGUI extends ViewController {
         boolean mayHaveFrame = (this.getCfg().getDestinations().size() > 1);
         if (!mayHaveFrame) {
             if (this.getCfg().getDestinations().size() > 0) {
-                if (((Cfg) this.getCfg().getDestinations().get(0)).getModel().isDescendantOf(SubSystem.class)) {
+                if (((Cfg) this.getCfg().getDestinations().get(0)).getModel().isDescendantOf(PORISSys.class)) {
                     mayHaveFrame = true;
                 }
             }
@@ -85,7 +85,7 @@ public class CfgGUI extends ViewController {
                 isWrapper = isWrapper && !this.getCfg().isHasValue();
                 isWrapper = isWrapper && !(this.getCfg().getModel().getSubSystems().size() > 1);
                 if (isWrapper) {
-                    isWrapper = ((SubSystem) this.getCfg().getModel().getSubSystems().get(0)).getSubSystems().size() <= 1;
+                    isWrapper = ((PORISSys) this.getCfg().getModel().getSubSystems().get(0)).getSubSystems().size() <= 1;
                 }
                 //System.out.println("El modelo "+this.getCfg().getModel()+" tiene "+this.getCfg().getModel().getSubSystems().size()+" hijos");
 

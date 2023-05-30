@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import org.gatATAC.poris.Cfg;
 import org.gatATAC.poris.SNodeLib;
 import org.gatATAC.poris.SNodeXML;
-import org.gatATAC.poris.SubSystem;
+import org.gatATAC.poris.PORISSys;
 import org.gatATAC.poris.player.app.AboutBox;
 import org.gatATAC.poris.player.app.PorisGUIAppDelegate;
 
@@ -292,7 +292,7 @@ public class CfgFrame extends javax.swing.JFrame {
         return resultPanel;
     }
 
-    public void loadSystemIntoResult(SNodeLib systemLib, SubSystem system){
+    public void loadSystemIntoResult(SNodeLib systemLib, PORISSys system){
                 loadModelIntoResult(systemLib, system.toString(), xmlSystemFrame.mainPanel, xmlSystemFrame.resultPanel, 1);
                 xmlSystemFrame.mainPanel.setMinimumSize(new java.awt.Dimension(200, 200));
                 xmlSystemFrame.setMinimumSize(new java.awt.Dimension(400, 400));

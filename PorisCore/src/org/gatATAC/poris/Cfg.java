@@ -21,7 +21,7 @@ public class Cfg extends PORIS {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5DE5B290-3135-1B97-632B-36674BAAE0EB]
     // </editor-fold> 
-    private SubSystem model;
+    private PORISSys model;
     private Value value;
     private boolean hasValue;
     private Data data;
@@ -151,7 +151,7 @@ public class Cfg extends PORIS {
      * 
      * @param model
      */
-    public Cfg(SubSystem model) {
+    public Cfg(PORISSys model) {
         super(model.getName());
         //System.out.println("******* Inicio Creo el Cfg "+this);
         this.setId(0);
@@ -173,7 +173,7 @@ public class Cfg extends PORIS {
      * 
      * @param model
      */
-    public void setModel(SubSystem model) {
+    public void setModel(PORISSys model) {
         if (this.getId() == 0) {
             this.setId(idCounter++);
         }
@@ -191,9 +191,9 @@ public class Cfg extends PORIS {
             this.hasValue = false;
         }
         for (int i = 0; i < this.model.getSubSystems().size(); i++) {
-            ArrayList<PORIS> modesForChild = this.getModesForChild((SubSystem) this.model.getSubSystems().get(i));
+            ArrayList<PORIS> modesForChild = this.getModesForChild((PORISSys) this.model.getSubSystems().get(i));
 
-            Cfg newCfg = new Cfg((SubSystem) this.model.getSubSystems().get(i));
+            Cfg newCfg = new Cfg((PORISSys) this.model.getSubSystems().get(i));
             newCfg.setPossibleModes(modesForChild);
             if (modesForChild.size() < 1) {
                 //System.out.println("Voy a pasar la cfg " + this + " a modo nulo");
@@ -244,7 +244,7 @@ public class Cfg extends PORIS {
         return hasValue;
     }
 
-    private ArrayList<PORIS> getModesForChild(SubSystem child) {
+    private ArrayList<PORIS> getModesForChild(PORISSys child) {
         //System.out.println("En "+this+" y modo "+this.mode+" busco los modos para "+child);
         ArrayList<PORIS> ret = new ArrayList();
         for (int i = 0; i < this.mode.getSubModes().size(); i++) {
@@ -284,7 +284,7 @@ public class Cfg extends PORIS {
      * @param model
      * @return
      */
-    public Cfg getCfgForModel(SubSystem model) {
+    public Cfg getCfgForModel(PORISSys model) {
         for (int i = 0; i < this.getDestinations().size(); i++) {
             if (((Cfg) this.getDestinations().get(i)).model == model) {
                 return (Cfg) this.getDestinations().get(i);
@@ -298,7 +298,7 @@ public class Cfg extends PORIS {
      * @param model
      * @return
      */
-    public Cfg getDescendantForModel(SubSystem model) {
+    public Cfg getDescendantForModel(PORISSys model) {
         for (int i = 0; i < this.getDestinations().size(); i++) {
             if (((Cfg) this.getDestinations().get(i)).model == model) {
                 return (Cfg) this.getDestinations().get(i);
@@ -427,7 +427,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public SubSystem getSubSystem() {
+    public PORISSys getSubSystem() {
         return model;
     }
 
@@ -526,7 +526,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public SubSystem getModel() {
+    public PORISSys getModel() {
         return model;
     }
 

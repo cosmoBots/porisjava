@@ -13,7 +13,7 @@ import org.w3c.dom.Node;
  *
  * @author osiris
  */
-public class SubSystem extends PORIS {
+public class PORISSys extends PORIS {
 
     private Mode defaultMode;
 
@@ -21,7 +21,7 @@ public class SubSystem extends PORIS {
      * 
      * @param name
      */
-    public SubSystem(String name) {
+    public PORISSys(String name) {
         super(name);
     }
 
@@ -72,7 +72,7 @@ public class SubSystem extends PORIS {
      * 
      * @param s
      */
-    public void addSubSystem (SubSystem s) {
+    public void addSubSystem (PORISSys s) {
         this.addDestination(s);
     }
 
@@ -97,7 +97,7 @@ public class SubSystem extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getSubSystems() {
-        return this.getFromListByClass(this.destinations, SubSystem.class);
+        return this.getFromListByClass(this.destinations, PORISSys.class);
     }
 
     /**
@@ -105,7 +105,7 @@ public class SubSystem extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getSuperSystems() {
-        return this.getFromListByClass(this.sources, SubSystem.class);
+        return this.getFromListByClass(this.sources, PORISSys.class);
     }
 
     /**
@@ -150,10 +150,10 @@ public class SubSystem extends PORIS {
      * @param name
      * @return
      */
-    public SubSystem getSubSystemFromName(String name) {
+    public PORISSys getSubSystemFromName(String name) {
         for (int i=0;i<this.getSubSystems().size();i++) {
-            if (((SubSystem)this.getSubSystems().get(i)).getName().equals(name)) {
-                return (SubSystem)this.getSubSystems().get(i);
+            if (((PORISSys)this.getSubSystems().get(i)).getName().equals(name)) {
+                return (PORISSys)this.getSubSystems().get(i);
             }
         }
         return null;
@@ -164,12 +164,12 @@ public class SubSystem extends PORIS {
      * @param name
      * @return
      */
-    public SubSystem getDescendantFromName(String name) {
+    public PORISSys getDescendantFromName(String name) {
         for (int i=0;i<this.getSubSystems().size();i++) {
-            if (((SubSystem)this.getSubSystems().get(i)).getName().equals(name)) {
-                return (SubSystem)this.getSubSystems().get(i);
+            if (((PORISSys)this.getSubSystems().get(i)).getName().equals(name)) {
+                return (PORISSys)this.getSubSystems().get(i);
             } else {
-                SubSystem ret=((SubSystem)this.getSubSystems().get(i)).getDescendantFromName(name);
+                PORISSys ret=((PORISSys)this.getSubSystems().get(i)).getDescendantFromName(name);
                 if (ret!=null){
                     return ret;
                 }

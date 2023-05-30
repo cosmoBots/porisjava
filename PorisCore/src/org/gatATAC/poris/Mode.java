@@ -119,7 +119,7 @@ public class Mode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getSystems() {
-        return getFromListByClass(this.sources, SubSystem.class);
+        return getFromListByClass(this.sources, PORISSys.class);
     }
 
     /**
