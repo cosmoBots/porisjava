@@ -33,7 +33,7 @@
   <name>FirstName</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">602</id>
@@ -86,7 +86,7 @@
   <name>SurName</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">604</id>
@@ -130,12 +130,12 @@
   <name>IP</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">601</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">603</id>
     </destination>
     <destination type="Mode">
@@ -188,7 +188,7 @@
   <name>MinFiducialCount</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">609</id>
@@ -243,7 +243,7 @@
   <name>Date</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDateRange">
       <id type="integer">613</id>
@@ -291,7 +291,7 @@
   <name>HourAngle</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">616</id>
@@ -335,12 +335,12 @@
   <name>DateSystem</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">612</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">615</id>
     </destination>
     <destination type="Mode">
@@ -418,7 +418,7 @@
   <name>CheckSpectraOverlap</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">620</id>
@@ -476,7 +476,7 @@
   <name>MaxMasks</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">624</id>
@@ -529,7 +529,7 @@
   <name>PreImagingFile</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">628</id>
@@ -584,7 +584,7 @@
   <name>RA</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">632</id>
@@ -632,7 +632,7 @@
   <name>Dec</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">635</id>
@@ -748,7 +748,7 @@
   <name>IPA</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">696</id>
@@ -865,15 +865,15 @@
   <name>Pointing</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">631</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">634</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">637</id>
     </destination>
     <destination type="Mode">
@@ -987,12 +987,12 @@
   <name>UsePreImaging</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">627</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">630</id>
     </destination>
     <destination type="Mode">
@@ -1052,7 +1052,7 @@
   <name>ObsID</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">647</id>
@@ -1151,7 +1151,7 @@
   <name>OffsetRA</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">651</id>
@@ -1256,7 +1256,7 @@
   <name>OffsetDec</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">656</id>
@@ -1312,12 +1312,12 @@
   <name>OffsetPointing</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">650</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">655</id>
     </destination>
     <destination type="Mode">
@@ -1415,30 +1415,30 @@
   <name>Observation</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">600</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">608</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">611</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">619</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">623</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">626</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">646</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">649</id>
     </destination>
     <destination type="Mode">
@@ -1483,9 +1483,9 @@
   <name>OsirisMDPreferences</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">599</id>
     </destination>
     <destination type="Mode">

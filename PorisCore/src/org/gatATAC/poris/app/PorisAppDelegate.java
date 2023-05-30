@@ -3,7 +3,7 @@ package org.gatATAC.poris.app;
 import org.gatATAC.poris.Cfg;
 import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.SNodeLib;
-import org.gatATAC.poris.SubSystem;
+import org.gatATAC.poris.PORISNode;
 import java.io.File;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -24,7 +24,7 @@ public class PorisAppDelegate {
 
     private final SNodeLib systemLib = new SNodeLib("System Library");
     private final SNodeLib configLib = new SNodeLib("Config Library");
-    private SubSystem system;
+    private PORISNode system;
     private Cfg config;
     private final String instrumentFileName;
     private boolean modelLoaded;    
@@ -122,7 +122,7 @@ public class PorisAppDelegate {
      * 
      * @return
      */
-    public SubSystem getSystem() {
+    public PORISNode getSystem() {
         return system;
     }
 
@@ -145,16 +145,16 @@ public class PorisAppDelegate {
             Element root = doc.getDocumentElement();
             systemLib.fromXML(root);
             //System.out.println("Total de " + sLib.size() + " instancias cargadas");
-            system = (SubSystem) systemLib.last();
+            system = (PORISNode) systemLib.last();
             //System.out.println("El objeto modelo es " + s);
             //System.out.print(" y");
             if (!system.isConsistent()) {
                 //System.out.print(" No");
             }
             //System.out.println(" es consistente");
-            //System.out.println("Sus valores son " + ((SubSystem) s).getValues());
-            //System.out.println("Sus hijos son " + ((SubSystem) s).getSubSystems());
-            //System.out.println("Sus modos son " + ((SubSystem) s).getModes());
+            //System.out.println("Sus valores son " + ((PORISNode) s).getValues());
+            //System.out.println("Sus hijos son " + ((PORISNode) s).getSubSystems());
+            //System.out.println("Sus modos son " + ((PORISNode) s).getModes());
             config = new Cfg(system);
             ArrayList<PORIS> aux = new ArrayList();
             if (config.subTree(aux)) {

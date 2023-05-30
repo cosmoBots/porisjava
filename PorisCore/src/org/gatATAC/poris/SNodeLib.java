@@ -89,11 +89,13 @@ public class SNodeLib extends Model {
             String instanceNodeName = instanceNodes.item(i).getNodeName();
             //System.out.println("Compruebo el child " + instanceNodeName);
             Node instanceNode = instanceNodes.item(i);
+            System.out.println("Hola!"+instanceNode);
             Node instanceTypeNode = PORIS.getChildNodeWithName(instanceNode, "type");
             if (instanceTypeNode != null) {
                 //System.out.println("Tiene el atributo type!!!" + instanceTypeNode);
                 String instanceClassName = instanceTypeNode.getTextContent();
-                //System.out.println("Tiene atributos!!! La clase es " + instanceClassName);
+                System.out.println("Tiene atributos!!! La clase es " + instanceClassName);
+                System.out.println("Hola!"+instanceClassName);
                 try {
                     /* Parche, intentar que no haya que poner el path a mano */
                     Class nodeClass = Class.forName("org.gatATAC.poris." + instanceClassName);
@@ -101,10 +103,10 @@ public class SNodeLib extends Model {
                         PORIS instance = PORIS.fromXML(nodeClass, instanceNodes.item(i));
                         if (instance != null) {
                             nodeList.add(instance);
-                            //System.out.println("Cargué perfectamente " + instanceNodeName);
-                            //System.out.println("Generando la instancia " + instance);
+                            System.out.println("Cargué perfectamente " + instanceNodeName);
+                            System.out.println("Generando la instancia " + instance);
                         } else {
-                            //System.out.println("Falló la carga de " + instanceNodeName);
+                            System.out.println("Falló la carga de " + instanceNodeName);
                         }
                     }
                 } catch (ClassNotFoundException e) {
@@ -114,6 +116,7 @@ public class SNodeLib extends Model {
                 //System.out.println("Me salto el nodo " + instanceNodeName);
             }
         }
+        
         notifyObs();
         return nodeList;
     }
