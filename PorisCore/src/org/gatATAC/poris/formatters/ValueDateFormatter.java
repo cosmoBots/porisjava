@@ -4,7 +4,7 @@
  */
 package org.gatATAC.poris.formatters;
 
-import org.gatATAC.poris.ValueDateRange;
+import org.gatATAC.poris.PORISValueDate;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -158,7 +158,7 @@ public class ValueDateFormatter extends ValueFormatter {
      * @param args
      */
     public static void main(String args[]) {
-        ValueDateRange expTime = new ValueDateRange("dateObs", new Date(), new Date(), new Date());
+        PORISValueDate expTime = new PORISValueDate("dateObs", new Date(), new Date(), new Date());
         System.out.println(expTime.toString());
     }
 }

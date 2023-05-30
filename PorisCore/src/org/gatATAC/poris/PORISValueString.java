@@ -14,7 +14,7 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class ValueString extends PORISValue implements ValueDataInterface<String> {
+public class PORISValueString extends PORISValue implements PORISValueData<String> {
 
     private String defaultValue;
 
@@ -23,7 +23,7 @@ public class ValueString extends PORISValue implements ValueDataInterface<String
      * @param name
      * @param defaultValue
      */
-    public ValueString(String name, String defaultValue) {
+    public PORISValueString(String name, String defaultValue) {
         super(name);
         this.defaultValue = defaultValue;
     }
@@ -32,7 +32,7 @@ public class ValueString extends PORISValue implements ValueDataInterface<String
      * 
      * @param name
      */
-    public ValueString(String name) {
+    public PORISValueString(String name) {
         super(name);
     }
 
@@ -105,7 +105,7 @@ public class ValueString extends PORISValue implements ValueDataInterface<String
 
     @Override
     public Object clone(String strValue) {
-        return new ValueString(this.getName(), strValue);
+        return new PORISValueString(this.getName(), strValue);
     }
 
     /**
@@ -135,7 +135,7 @@ public class ValueString extends PORISValue implements ValueDataInterface<String
     @Override
     public boolean loadFromXML(Node node) {
         boolean ret = super.loadFromXML(node);
-        //System.out.println("Ejecuto el codigo ValueString.loadFromXML()");
+        //System.out.println("Ejecuto el codigo PORISValueString.loadFromXML()");
         // Name
         String defVal = getChildNodeWithName(node, "default-string").getTextContent();
         //System.out.println("El valor por defecto de la instancia es " + defVal);

@@ -12,7 +12,7 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class ValueFilePath extends ValueString implements ValueDataInterface<String>{
+public class ValueFilePath extends PORISValueString implements PORISValueData<String>{
 
     private String fileExtension;
     private String fileDescription;

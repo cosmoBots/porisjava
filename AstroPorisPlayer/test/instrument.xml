@@ -1573,7 +1573,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">10000.0</rangemax>
   <rangemin type="float">3500.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer" nil="true"></value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1588,7 +1588,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">588</id>
     </destination>
   </destinations>
@@ -1603,7 +1603,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">10000.0</rangemax>
   <rangemin type="float">1.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer" nil="true"></value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1618,7 +1618,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">591</id>
     </destination>
   </destinations>
@@ -1700,7 +1700,7 @@
   <name>Date</name>
   <node-type-id type="integer">5</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>ValueDateRange</type>
+  <type>PORISValueDate</type>
   <value-formatter-id type="integer">6</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1715,7 +1715,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDateRange">
+    <destination type="PORISValueDate">
       <id type="integer">613</id>
     </destination>
   </destinations>
@@ -1730,7 +1730,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">360.0</rangemax>
   <rangemin type="float">0.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">2</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1745,7 +1745,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">616</id>
     </destination>
   </destinations>
@@ -1780,7 +1780,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">628</id>
     </destination>
   </destinations>
@@ -1818,7 +1818,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">21600.0</rangemax>
   <rangemin type="float">-21600.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">8</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1833,7 +1833,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">652</id>
     </destination>
   </destinations>
@@ -1855,7 +1855,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">1296000.0</rangemax>
   <rangemin type="float">-1296000.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">9</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1870,7 +1870,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">651</id>
     </destination>
   </destinations>
@@ -1892,7 +1892,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">21600.0</rangemax>
   <rangemin type="float">-21600.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">8</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1907,7 +1907,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">656</id>
     </destination>
   </destinations>
@@ -1929,7 +1929,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">1296000.0</rangemax>
   <rangemin type="float">-1296000.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">9</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -1944,7 +1944,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">657</id>
     </destination>
   </destinations>
@@ -1991,7 +1991,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">360.0</rangemax>
   <rangemin type="float">0.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">2</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -2006,7 +2006,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">632</id>
     </destination>
   </destinations>
@@ -2021,7 +2021,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">90.0</rangemax>
   <rangemin type="float">-90.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">3</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -2036,7 +2036,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">635</id>
     </destination>
   </destinations>
@@ -2051,7 +2051,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">360.0</rangemax>
   <rangemin type="float">0.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">4</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -2066,7 +2066,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">698</id>
     </destination>
   </destinations>
@@ -2268,7 +2268,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">1000.0</rangemax>
   <rangemin type="float">1.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">7</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -2283,7 +2283,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">569</id>
     </destination>
   </destinations>
@@ -2469,7 +2469,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">588</id>
     </destination>
     <destination type="PORISMode">
@@ -2494,7 +2494,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">591</id>
     </destination>
     <destination type="PORISMode">
@@ -2728,7 +2728,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">569</id>
     </destination>
     <destination type="PORISMode">
@@ -2775,7 +2775,7 @@
   <name>FirstNameString</name>
   <node-type-id type="integer">5</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>ValueString</type>
+  <type>PORISValueString</type>
   <value-formatter-id type="integer" nil="true"></value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -2790,7 +2790,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">602</id>
     </destination>
   </destinations>
@@ -2805,7 +2805,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">602</id>
     </destination>
     <destination type="PORISMode">
@@ -2828,7 +2828,7 @@
   <name>SurNameString</name>
   <node-type-id type="integer">5</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>ValueString</type>
+  <type>PORISValueString</type>
   <value-formatter-id type="integer" nil="true"></value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -2843,7 +2843,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">604</id>
     </destination>
   </destinations>
@@ -2858,7 +2858,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">604</id>
     </destination>
     <destination type="PORISMode">
@@ -2930,7 +2930,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">10.0</rangemax>
   <rangemin type="float">0.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">7</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -2945,7 +2945,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">609</id>
     </destination>
   </destinations>
@@ -2960,7 +2960,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">609</id>
     </destination>
     <destination type="PORISMode">
@@ -2985,7 +2985,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDateRange">
+    <destination type="PORISValueDate">
       <id type="integer">613</id>
     </destination>
     <destination type="PORISMode">
@@ -3003,7 +3003,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">616</id>
     </destination>
     <destination type="PORISMode">
@@ -3139,7 +3139,7 @@
   <project-id type="integer">17</project-id>
   <rangemax type="float">15.0</rangemax>
   <rangemin type="float">1.0</rangemin>
-  <type>ValueDoubleRange</type>
+  <type>PORISValueFloat</type>
   <value-formatter-id type="integer">7</value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -3154,7 +3154,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">624</id>
     </destination>
   </destinations>
@@ -3169,7 +3169,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">624</id>
     </destination>
     <destination type="PORISMode">
@@ -3194,7 +3194,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">628</id>
     </destination>
     <destination type="PORISMode">
@@ -3219,7 +3219,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">632</id>
     </destination>
     <destination type="PORISMode">
@@ -3237,7 +3237,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">635</id>
     </destination>
     <destination type="PORISMode">
@@ -3329,7 +3329,7 @@
     <destination type="PORISValue">
       <id type="integer">697</id>
     </destination>
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">698</id>
     </destination>
     <destination type="PORISMode">
@@ -3529,7 +3529,7 @@
   <name>ObsIDString</name>
   <node-type-id type="integer">5</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>ValueString</type>
+  <type>PORISValueString</type>
   <value-formatter-id type="integer" nil="true"></value-formatter-id>
   <destinations type="array"/>
   <labels type="array"/>
@@ -3544,7 +3544,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISMode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">647</id>
     </destination>
   </destinations>
@@ -3559,7 +3559,7 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueString">
+    <destination type="PORISValueString">
       <id type="integer">647</id>
     </destination>
     <destination type="PORISMode">
@@ -3584,10 +3584,10 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">651</id>
     </destination>
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">652</id>
     </destination>
     <destination type="PORISMode">
@@ -3615,13 +3615,13 @@
   <project-id type="integer">17</project-id>
   <type>PORISNode</type>
   <destinations type="array">
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">656</id>
     </destination>
     <destination type="PORISMode">
       <id type="integer">658</id>
     </destination>
-    <destination type="ValueDoubleRange">
+    <destination type="PORISValueFloat">
       <id type="integer">657</id>
     </destination>
     <destination type="PORISMode">

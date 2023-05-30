@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class ValueDoubleRange extends PORISValue implements ValueDataInterface<Double> {
+public class PORISValueFloat extends PORISValue implements PORISValueData<Double> {
 
     private Double min, max, defaultValue;
 
@@ -26,7 +26,7 @@ public class ValueDoubleRange extends PORISValue implements ValueDataInterface<D
      * @param min
      * @param max
      */
-    public ValueDoubleRange(String name, Double defaultValue, Double min, Double max) {
+    public PORISValueFloat(String name, Double defaultValue, Double min, Double max) {
         super(name);
         this.defaultValue = defaultValue;
         this.min = min;
@@ -51,7 +51,7 @@ public class ValueDoubleRange extends PORISValue implements ValueDataInterface<D
      * 
      * @param name
      */
-    public ValueDoubleRange(String name) {
+    public PORISValueFloat(String name) {
         super(name);
     }
 
@@ -105,7 +105,7 @@ public class ValueDoubleRange extends PORISValue implements ValueDataInterface<D
 
     @Override
     public Object clone(String strValue) {
-        ValueDoubleRange ret2 = new ValueDoubleRange(this.getName(), this.defaultValue, this.min, this.max);
+        PORISValueFloat ret2 = new PORISValueFloat(this.getName(), this.defaultValue, this.min, this.max);
         return ret2;
     }
 
@@ -117,7 +117,7 @@ public class ValueDoubleRange extends PORISValue implements ValueDataInterface<D
     @Override
     public PORISValue getValueForString(String name) {
         if (this.isValidFromStr(name)) {
-            return new ValueDoubleRange(name, this.defaultValue, this.min, this.max);
+            return new PORISValueFloat(name, this.defaultValue, this.min, this.max);
         }
         return null;
     }
@@ -178,7 +178,7 @@ public class ValueDoubleRange extends PORISValue implements ValueDataInterface<D
     public boolean loadFromXML(Node node) {
         boolean ret = super.loadFromXML(node);
         // Name
-        //System.out.println("Ejecuto el codigo ValueDoubleRange.loadFromXML()");
+        //System.out.println("Ejecuto el codigo PORISValueFloat.loadFromXML()");
         String defVal = getChildNodeWithName(node, "default-float").getTextContent();
         String maxVal = getChildNodeWithName(node, "rangemax").getTextContent();
         String minVal = getChildNodeWithName(node, "rangemin").getTextContent();
@@ -195,7 +195,7 @@ public class ValueDoubleRange extends PORISValue implements ValueDataInterface<D
      * @param min
      * @param max
      */
-    public ValueDoubleRange(ValueDoubleRange toClone, Double min, Double max) {
+    public PORISValueFloat(PORISValueFloat toClone, Double min, Double max) {
         this(toClone.getName(), toClone.defaultValue, min, max);
     }
 
@@ -214,7 +214,7 @@ public class ValueDoubleRange extends PORISValue implements ValueDataInterface<D
      * @param args
      */
     public static void main(String args[]) {
-        ValueDoubleRange expTime = new ValueDoubleRange("expTime", 0.10, 0.001, 3600.0);
+        PORISValueFloat expTime = new PORISValueFloat("expTime", 0.10, 0.001, 3600.0);
         System.out.println(expTime.toString());
     }
 }

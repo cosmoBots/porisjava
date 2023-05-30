@@ -10,7 +10,7 @@ package org.gatATAC.poris;
  * @param <T> 
  * @author txinto
  */
-public interface ValueDataInterface<T> {
+public interface PORISValueData<T> {
     /**
      * 
      * @return

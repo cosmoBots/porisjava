@@ -66,17 +66,17 @@ public class Cfg extends PORIS {
     public Data getData() {
         if (this.data == null) {
             if (this.value != null){
-                if (this.value.implementsInterface(ValueDataInterface.class)) {
-                    if (this.value.isDescendantOf(ValueDoubleRange.class)) {
+                if (this.value.implementsInterface(PORISValueData.class)) {
+                    if (this.value.isDescendantOf(PORISValueFloat.class)) {
                         this.data = new DataDouble((ValueDoubleFormatter) this.value.getFormatter());
                     } else {
-                        if (this.value.isDescendantOf(ValueDateRange.class)) {
+                        if (this.value.isDescendantOf(PORISValueDate.class)) {
                             this.data = new DataDate((ValueDateFormatter) this.value.getFormatter());
                         } else {
                             this.data = new DataString();
                         }
                     }
-                    this.data.setDataValue(((ValueDataInterface) this.value).getDefaultValue());
+                    this.data.setDataValue(((PORISValueData) this.value).getDefaultValue());
                 }
             } else {
                 /* PORISValue is not active, probably because the mode is not activating the param */
@@ -84,18 +84,18 @@ public class Cfg extends PORIS {
             }
         } else {
             if (this.value != null){
-                if (this.value.implementsInterface(ValueDataInterface.class)) {
+                if (this.value.implementsInterface(PORISValueData.class)) {
                     if (!this.value.isValidFromStr(this.data.toString())) {
-                        if (this.value.isDescendantOf(ValueDoubleRange.class)) {
+                        if (this.value.isDescendantOf(PORISValueFloat.class)) {
                             this.data = new DataDouble((ValueDoubleFormatter) this.value.getFormatter());
                         } else {
-                            if (this.value.isDescendantOf(ValueDateRange.class)) {
+                            if (this.value.isDescendantOf(PORISValueDate.class)) {
                                 this.data = new DataDate((ValueDateFormatter) this.value.getFormatter());
                             } else {
                                 this.data = new DataString();
                             }
                         }
-                        this.data.setDataValue(((ValueDataInterface) this.value).getDefaultValue());
+                        this.data.setDataValue(((PORISValueData) this.value).getDefaultValue());
                     }
                 }
             } else {
@@ -498,7 +498,7 @@ public class Cfg extends PORIS {
                 // Add value
                 if (this.hasValue && this.value != null) {
                     ret.setAttribute("value", this.getValue().getName());
-                    if (this.value.implementsInterface(ValueDataInterface.class)) {
+                    if (this.value.implementsInterface(PORISValueData.class)) {
                         ret.setAttribute("dataValue", this.getData().toUnformattedString());
                     }
                 }

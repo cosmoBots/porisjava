@@ -7,7 +7,7 @@ package org.gatATAC.poris.player;
 
 import org.gatATAC.poris.PORIS;
 import org.gatATAC.poris.PORISValue;
-import org.gatATAC.poris.ValueDataInterface;
+import org.gatATAC.poris.PORISValueData;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.io.File;
@@ -98,7 +98,7 @@ public class ValueGUICell extends javax.swing.JPanel {
                 this.remove(valueCell);
             }
             if (this.value != null) {
-                if (value.implementsInterface(ValueDataInterface.class)) {
+                if (value.implementsInterface(PORISValueData.class)) {
                     valueCell = new javax.swing.JTextField();
                     ((JTextField) valueCell).setText(this.gui.getCfg().getData().toString());
                     ((JTextField) valueCell).addActionListener(new java.awt.event.ActionListener() {
@@ -230,7 +230,7 @@ public class ValueGUICell extends javax.swing.JPanel {
     
     private void update() {
         if (this.value != null) {
-            if (this.value.implementsInterface(ValueDataInterface.class)) {
+            if (this.value.implementsInterface(PORISValueData.class)) {
                 if (this.valueCell.getClass() != JTextField.class) {
                     addCell();
                 }

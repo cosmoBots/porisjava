@@ -7,7 +7,7 @@ package org.gatATAC.poris.test;
 import org.gatATAC.poris.PORISMode;
 import org.gatATAC.poris.PORISNode;
 import org.gatATAC.poris.PORISValue;
-import org.gatATAC.poris.ValueDoubleRange;
+import org.gatATAC.poris.PORISValueFloat;
 
 /**
  *
@@ -138,7 +138,7 @@ public class GenCode {
         PORISNode s517 = new PORISNode("TxExpTime");
         s517.setId(517);
         s517.setLabel("Exposure Time");
-        ValueDoubleRange v518 = new ValueDoubleRange("TxExpTimeRange", 0.01, 0.0, 1000.0);
+        PORISValueFloat v518 = new PORISValueFloat("TxExpTimeRange", 0.01, 0.0, 1000.0);
         v518.setId(518);
         s517.addValue(v518);
         PORISMode m524 = new PORISMode("TxExpTimeNormal");
