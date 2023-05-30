@@ -214,7 +214,7 @@ public class SNode extends Model {
         return destinations;
     }
 
-    SNode getDestinationsFromName(String name) {
+    SNode getDestinationFromName(String name) {
         for (int i = 0; i < this.destinations.size(); i++) {
             if (this.destinations.get(i).isValidFromStr(name)) {
                 return this.destinations.get(i);
@@ -223,7 +223,7 @@ public class SNode extends Model {
         return null;
     }
 
-    SNode getSourcesFromName(String name) {
+    SNode getSourceFromName(String name) {
         for (int i = 0; i < this.sources.size(); i++) {
             if (this.sources.get(i).isValidFromStr(name)) {
                 return this.sources.get(i);
@@ -627,7 +627,7 @@ public class SNode extends Model {
             try {
 
 
-                if (BaseClass.isDescendantOf(thisClass, SNode.class)) {
+                if (BaseClass.isClassDescendantOf(thisClass, SNode.class)) {
                     Method[] methods = thisClass.getMethods();
                     boolean found = false;
                     for (int i2 = 0;

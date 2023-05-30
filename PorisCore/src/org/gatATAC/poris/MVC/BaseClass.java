@@ -20,7 +20,7 @@ public class BaseClass {
      */
     public boolean isDescendantOf(Class ancestorClass) {
         Class thisClass=this.getClass();
-        return isDescendantOf(thisClass,ancestorClass);
+        return isClassDescendantOf(thisClass,ancestorClass);
     }
 
     /**
@@ -43,7 +43,7 @@ public class BaseClass {
      * @param ancestorClass
      * @return
      */
-    public static boolean isDescendantOf(Class clase, Class ancestorClass) {
+    public static boolean isClassDescendantOf(Class clase, Class ancestorClass) {
         Class thisClass=clase;
         while (thisClass!=null) {
             if (thisClass==ancestorClass) { 
@@ -64,10 +64,10 @@ public class BaseClass {
     public static boolean isDescendantOf(String strClass, Class ancestorClass) {
         try {
             Class thisClass=Class.forName(strClass);
-            return isDescendantOf(thisClass,ancestorClass);
+            return isClassDescendantOf(thisClass,ancestorClass);
         }
         catch (ClassNotFoundException e) {
-            //System.err.println("BaseClass.isDescendantOf: ClassNotFoundException: "+e.getLocalizedMessage());
+            //System.err.println("BaseClass.isClassDescendantOf: ClassNotFoundException: "+e.getLocalizedMessage());
             return false;
         }
     }
