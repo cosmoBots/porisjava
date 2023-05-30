@@ -4,7 +4,7 @@
  */
 package org.gatATAC.poris.test;
 
-import org.gatATAC.poris.Mode;
+import org.gatATAC.poris.PORISMode;
 import org.gatATAC.poris.PORISNode;
 import org.gatATAC.poris.Value;
 import org.gatATAC.poris.ValueDoubleRange;
@@ -36,7 +36,7 @@ public class GenCode {
         v505.setId(505);
         v505.setLabel("1.0 arcsecs");
         s499.addValue(v505);
-        Mode m519 = new Mode("TxMasksAll");
+        PORISMode m519 = new PORISMode("TxMasksAll");
         m519.setId(519);
         m519.setLabel("All");
         m519.addValue(v503);
@@ -57,14 +57,14 @@ public class GenCode {
         v510.setId(510);
         v510.setLabel("Blue");
         s500.addValue(v510);
-        Mode m521 = new Mode("TxFiltersAll");
+        PORISMode m521 = new PORISMode("TxFiltersAll");
         m521.setId(521);
         m521.setLabel("All");
         m521.addValue(v509);
         m521.addValue(v510);
         m521.setDefaultValue(v509);
         s500.addMode(m521);
-        Mode m522 = new Mode("TxFiltersNone");
+        PORISMode m522 = new PORISMode("TxFiltersNone");
         m522.setId(522);
         m522.setLabel("None");
         s500.addMode(m522);
@@ -85,7 +85,7 @@ public class GenCode {
         v508.setId(508);
         v508.setLabel("R2000");
         s501.addValue(v508);
-        Mode m520 = new Mode("TxDispersionAll");
+        PORISMode m520 = new PORISMode("TxDispersionAll");
         m520.setId(520);
         m520.setLabel("All");
         m520.addValue(v506);
@@ -117,7 +117,7 @@ public class GenCode {
         v516.setId(516);
         v516.setLabel("2x2");
         s512.addValue(v516);
-        Mode m523 = new Mode("TxBinningAll");
+        PORISMode m523 = new PORISMode("TxBinningAll");
         m523.setId(523);
         m523.setLabel("All");
         m523.addValue(v513);
@@ -126,7 +126,7 @@ public class GenCode {
         m523.addValue(v516);
         m523.setDefaultValue(v513);
         s512.addMode(m523);
-        Mode m526 = new Mode("TxBinningSquare");
+        PORISMode m526 = new PORISMode("TxBinningSquare");
         m526.setId(526);
         m526.setLabel("Square");
         m526.addValue(v513);
@@ -141,7 +141,7 @@ public class GenCode {
         ValueDoubleRange v518 = new ValueDoubleRange("TxExpTimeRange", 0.01, 0.0, 1000.0);
         v518.setId(518);
         s517.addValue(v518);
-        Mode m524 = new Mode("TxExpTimeNormal");
+        PORISMode m524 = new PORISMode("TxExpTimeNormal");
         m524.setId(524);
         m524.setLabel("Normal");
         m524.addValue(v518);
@@ -149,14 +149,14 @@ public class GenCode {
         s517.addMode(m524);
         s517.setDefaultMode(m524);
         s502.addSubSystem(s517);
-        Mode m525 = new Mode("TxDetectorNormal");
+        PORISMode m525 = new PORISMode("TxDetectorNormal");
         m525.setId(525);
         m525.setLabel("Normal");
         m525.addSubMode(m523);
         m525.addSubMode(m524);
         m525.setDefaultSubMode(m523);
         s502.addMode(m525);
-        Mode m527 = new Mode("TxDetectorSquareBinning");
+        PORISMode m527 = new PORISMode("TxDetectorSquareBinning");
         m527.setId(527);
         m527.setLabel("Square Binning");
         m527.addSubMode(m524);
@@ -165,7 +165,7 @@ public class GenCode {
         s502.addMode(m527);
         s502.setDefaultMode(m525);
         s498.addSubSystem(s502);
-        Mode m528 = new Mode("TxInstrumentPhotometry");
+        PORISMode m528 = new PORISMode("TxInstrumentPhotometry");
         m528.setId(528);
         m528.setLabel("Photometry");
         m528.addSubMode(m521);
@@ -173,7 +173,7 @@ public class GenCode {
         m528.addSubMode(m525);
         m528.setDefaultSubMode(m521);
         s498.addMode(m528);
-        Mode m529 = new Mode("TxInstrumentSpectroscopy");
+        PORISMode m529 = new PORISMode("TxInstrumentSpectroscopy");
         m529.setId(529);
         m529.setLabel("Spectroscopy");
         m529.addSubMode(m519);

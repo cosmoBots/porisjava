@@ -18,7 +18,7 @@
   <name>FirstName_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">602</id>
@@ -38,7 +38,7 @@
     <destination type="ValueString">
       <id type="integer">602</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">605</id>
     </destination>
   </destinations>
@@ -71,7 +71,7 @@
   <name>Surname_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">604</id>
@@ -91,7 +91,7 @@
     <destination type="ValueString">
       <id type="integer">604</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">606</id>
     </destination>
   </destinations>
@@ -112,12 +112,12 @@
   <name>IP_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">605</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">606</id>
     </destination>
   </destinations>
@@ -138,7 +138,7 @@
     <destination type="PORISNode">
       <id type="integer">603</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">607</id>
     </destination>
   </destinations>
@@ -173,7 +173,7 @@
   <name>MinFiducialCount_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">609</id>
@@ -193,7 +193,7 @@
     <destination type="ValueDoubleRange">
       <id type="integer">609</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">610</id>
     </destination>
   </destinations>
@@ -228,7 +228,7 @@
   <name>Date_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDateRange">
       <id type="integer">613</id>
@@ -248,7 +248,7 @@
     <destination type="ValueDateRange">
       <id type="integer">613</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">614</id>
     </destination>
   </destinations>
@@ -276,7 +276,7 @@
   <name>HourAngle_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">616</id>
@@ -296,7 +296,7 @@
     <destination type="ValueDoubleRange">
       <id type="integer">616</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">617</id>
     </destination>
   </destinations>
@@ -317,12 +317,12 @@
   <name>DateSystem_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">614</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">617</id>
     </destination>
   </destinations>
@@ -343,7 +343,7 @@
     <destination type="PORISNode">
       <id type="integer">615</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">618</id>
     </destination>
   </destinations>
@@ -400,7 +400,7 @@
   <name>CheckSpectraOverlap_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">620</id>
@@ -426,7 +426,7 @@
     <destination type="Value">
       <id type="integer">621</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">622</id>
     </destination>
   </destinations>
@@ -461,7 +461,7 @@
   <name>MaxMasks_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">624</id>
@@ -481,7 +481,7 @@
     <destination type="ValueDoubleRange">
       <id type="integer">624</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">625</id>
     </destination>
   </destinations>
@@ -514,7 +514,7 @@
   <name>PreImagingFile_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">628</id>
@@ -534,7 +534,7 @@
     <destination type="ValueString">
       <id type="integer">628</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">629</id>
     </destination>
   </destinations>
@@ -569,7 +569,7 @@
   <name>RA_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">632</id>
@@ -589,7 +589,7 @@
     <destination type="ValueDoubleRange">
       <id type="integer">632</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">633</id>
     </destination>
   </destinations>
@@ -617,7 +617,7 @@
   <name>Dec_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">635</id>
@@ -637,7 +637,7 @@
     <destination type="ValueDoubleRange">
       <id type="integer">635</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">636</id>
     </destination>
   </destinations>
@@ -701,7 +701,7 @@
   <name>IPA_User</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">698</id>
@@ -717,7 +717,7 @@
   <name>IPA_240</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">696</id>
@@ -733,7 +733,7 @@
   <name>IPA_150</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">697</id>
@@ -759,13 +759,13 @@
     <destination type="ValueDoubleRange">
       <id type="integer">698</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">699</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">691</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">692</id>
     </destination>
   </destinations>
@@ -786,15 +786,15 @@
   <name>Pointing_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">633</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">636</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">699</id>
     </destination>
   </destinations>
@@ -808,15 +808,15 @@
   <name>Pointing_240</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">633</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">636</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">691</id>
     </destination>
   </destinations>
@@ -837,15 +837,15 @@
   <name>Pointing_150</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">633</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">636</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">692</id>
     </destination>
   </destinations>
@@ -876,13 +876,13 @@
     <destination type="PORISNode">
       <id type="integer">637</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">643</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">693</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">694</id>
     </destination>
   </destinations>
@@ -896,9 +896,9 @@
   <name>UsePreImaging_Dont240</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">693</id>
     </destination>
   </destinations>
@@ -919,9 +919,9 @@
   <name>UsePreImaging_Use</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">629</id>
     </destination>
   </destinations>
@@ -942,9 +942,9 @@
   <name>UsePreImaging_Dont150</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">694</id>
     </destination>
   </destinations>
@@ -965,9 +965,9 @@
   <name>UsePreImaging_Dont</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">643</id>
     </destination>
   </destinations>
@@ -995,16 +995,16 @@
     <destination type="PORISNode">
       <id type="integer">630</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">644</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">645</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">695</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">700</id>
     </destination>
   </destinations>
@@ -1037,7 +1037,7 @@
   <name>ObsID_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueString">
       <id type="integer">647</id>
@@ -1057,7 +1057,7 @@
     <destination type="ValueString">
       <id type="integer">647</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">648</id>
     </destination>
   </destinations>
@@ -1106,7 +1106,7 @@
   <name>OffsetRA_Arcsecs</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">651</id>
@@ -1129,7 +1129,7 @@
   <name>OffsetRA_Arcmins</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">652</id>
@@ -1159,10 +1159,10 @@
     <destination type="ValueDoubleRange">
       <id type="integer">652</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">653</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">654</id>
     </destination>
   </destinations>
@@ -1197,7 +1197,7 @@
   <name>OffsetDec_Arcmins</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">656</id>
@@ -1234,7 +1234,7 @@
   <name>OffsetDec_Arcsecs</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">657</id>
@@ -1261,13 +1261,13 @@
     <destination type="ValueDoubleRange">
       <id type="integer">656</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">658</id>
     </destination>
     <destination type="ValueDoubleRange">
       <id type="integer">657</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">659</id>
     </destination>
   </destinations>
@@ -1288,18 +1288,18 @@
   <name>OffsetPointing_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">654</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">653</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">658</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">659</id>
     </destination>
   </destinations>
@@ -1320,7 +1320,7 @@
     <destination type="PORISNode">
       <id type="integer">655</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">660</id>
     </destination>
   </destinations>
@@ -1341,21 +1341,21 @@
   <name>Observation_Preferences</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">607</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">610</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">622</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">625</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">648</id>
     </destination>
   </destinations>
@@ -1369,15 +1369,15 @@
   <name>Observation_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">618</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">645</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">700</id>
     </destination>
   </destinations>
@@ -1391,18 +1391,18 @@
   <name>Observation_Offset</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">618</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">645</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">660</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">700</id>
     </destination>
   </destinations>
@@ -1441,13 +1441,13 @@
     <destination type="PORISNode">
       <id type="integer">649</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">661</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">662</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">663</id>
     </destination>
   </destinations>
@@ -1468,9 +1468,9 @@
   <name>OsirisMDPreferences_Normal</name>
   <node-type-id type="integer">6</node-type-id>
   <project-id type="integer">17</project-id>
-  <type>Mode</type>
+  <type>PORISMode</type>
   <destinations type="array">
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">661</id>
     </destination>
   </destinations>
@@ -1488,7 +1488,7 @@
     <destination type="PORISNode">
       <id type="integer">599</id>
     </destination>
-    <destination type="Mode">
+    <destination type="PORISMode">
       <id type="integer">665</id>
     </destination>
   </destinations>

@@ -80,7 +80,7 @@ public class CfgGUIPanel extends javax.swing.JPanel {
         this.mode.setModel(new DefaultComboBoxModel(values.toArray()));
     }
 
-    public void setMode(Mode mode) {
+    public void setMode(PORISMode mode) {
         //System.out.println("Entro en setMode de CfgGUIPanel de "+this.gui.getCfg()+" con modo "+mode);
         if (mode != null) {
             this.mode.setSelectedItem(mode);
@@ -94,8 +94,8 @@ public class CfgGUIPanel extends javax.swing.JPanel {
         this.updateVisibilities();
     }
 
-    public Mode getSelectedMode() {
-        return (Mode) this.mode.getSelectedItem();
+    public PORISMode getSelectedMode() {
+        return (PORISMode) this.mode.getSelectedItem();
     }
 
     /** This method is called from within the constructor to

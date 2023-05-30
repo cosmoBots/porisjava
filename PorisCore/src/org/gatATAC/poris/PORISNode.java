@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
  */
 public class PORISNode extends PORIS {
 
-    private Mode defaultMode;
+    private PORISMode defaultMode;
 
     /**
      * 
@@ -29,7 +29,7 @@ public class PORISNode extends PORIS {
      * 
      * @param defaultMode
      */
-    public void setDefaultMode(Mode defaultMode) {
+    public void setDefaultMode(PORISMode defaultMode) {
         if (defaultMode!=this.defaultMode) {
             this.defaultMode = defaultMode;
             //System.out.println("2 En "+this+" pongo como defaultMode "+defaultMode);
@@ -41,7 +41,7 @@ public class PORISNode extends PORIS {
      * 
      * @return
      */
-    public Mode getDefaultMode() {
+    public PORISMode getDefaultMode() {
         return defaultMode;
     }
 
@@ -49,7 +49,7 @@ public class PORISNode extends PORIS {
      * 
      * @param sm
      */
-    public void addMode(Mode sm) {
+    public void addMode(PORISMode sm) {
         this.addDestination(sm);
     }
 
@@ -59,10 +59,10 @@ public class PORISNode extends PORIS {
      */
     @Override
     public void addDestination(PORIS child) {
-        if (child.isDescendantOf(Mode.class) &&
+        if (child.isDescendantOf(PORISMode.class) &&
                 this.getDefaultMode()==null)
         {
-            this.defaultMode=(Mode)child;
+            this.defaultMode=(PORISMode)child;
             //System.out.println("En "+this+" pongo como defaultMode "+child);
         }
         super.addDestination(child);
@@ -89,7 +89,7 @@ public class PORISNode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getModes() {
-        return this.getFromListByClass(this.destinations, Mode.class);
+        return this.getFromListByClass(this.destinations, PORISMode.class);
     }
 
     /**
@@ -121,10 +121,10 @@ public class PORISNode extends PORIS {
      * @param name
      * @return
      */
-    public Mode getModeFromName(String name) {
+    public PORISMode getModeFromName(String name) {
         for (int i=0;i<this.getModes().size();i++) {
             if (this.getModes().get(i).getName().equals(name)) {
-                return (Mode)this.getModes().get(i);
+                return (PORISMode)this.getModes().get(i);
             }
         }
         return null;
@@ -208,7 +208,7 @@ public class PORISNode extends PORIS {
         boolean ret = super.loadFromXML(node);
         String defMod = getChildNodeWithName(node, "default-mode-id").getTextContent();
         if (defMod != null) {
-            Mode newMod = (Mode) xmlLoaderHashMap.get(defMod);
+            PORISMode newMod = (PORISMode) xmlLoaderHashMap.get(defMod);
             if (newMod != null) {
                 this.setDefaultMode(newMod);
             }

@@ -29,9 +29,9 @@ public class Cfg extends PORIS {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.4C1E880E-1DBB-9BE6-02B3-3199ADFA0075]
     // </editor-fold> 
-    private Mode mode;
+    private PORISMode mode;
     private ArrayList<PORIS> possibleModes;
-    private Mode subMode;
+    private PORISMode subMode;
 
     /**
      * 
@@ -46,7 +46,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public Mode getSubMode() {
+    public PORISMode getSubMode() {
         return subMode;
     }
 
@@ -54,7 +54,7 @@ public class Cfg extends PORIS {
      * 
      * @param subMode
      */
-    public void setSubMode(Mode subMode) {
+    public void setSubMode(PORISMode subMode) {
         this.subMode = subMode;
         notifyObs();
     }
@@ -248,11 +248,11 @@ public class Cfg extends PORIS {
         //System.out.println("En "+this+" y modo "+this.mode+" busco los modos para "+child);
         ArrayList<PORIS> ret = new ArrayList();
         for (int i = 0; i < this.mode.getSubModes().size(); i++) {
-            Mode thisMode = (Mode) this.mode.getSubModes().get(i);
+            PORISMode thisMode = (PORISMode) this.mode.getSubModes().get(i);
             //System.out.println("En el modo "+thisMode+" Miro el nodo "+child+" entre los sistemas "+thisMode.getSystems());
             if (thisMode.getSystems().contains(child)) {
                 //System.out.println("Añado el nodo "+thisMode);
-                ret.add((Mode) thisMode);
+                ret.add((PORISMode) thisMode);
             }
         }
 
@@ -275,7 +275,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public Mode getMode() {
+    public PORISMode getMode() {
         return mode;
     }
 
@@ -319,7 +319,7 @@ public class Cfg extends PORIS {
      * 
      * @param mode
      */
-    public void setMode(Mode mode) {
+    public void setMode(PORISMode mode) {
         if (this.mode != mode) {
             //System.out.println("En " + this + " intento poner el modo " + mode);
             this.mode = mode;
@@ -334,7 +334,7 @@ public class Cfg extends PORIS {
                 }
                 ArrayList<Cfg> childsForLoop = (ArrayList<Cfg>) this.getDestinations().clone();
                 for (int i = 0; i < this.mode.getSubModes().size(); i++) {
-                    Mode thisChildMode = (Mode) this.mode.getSubModes().get(i);
+                    PORISMode thisChildMode = (PORISMode) this.mode.getSubModes().get(i);
                     //System.out.println("++Trato el modo " + thisChildMode);
                     for (int i2 = 0; i2 < this.getDestinations().size(); i2++) {
                         if (thisChildMode.getSystems().contains(((Cfg) this.getDestinations().get(i2)).getModel())) {
@@ -358,14 +358,14 @@ public class Cfg extends PORIS {
                         if (this.mode.getSubModes().contains(this.mode.getDefaultSubMode())) {
                             this.subMode = (this.mode.getDefaultSubMode());
                         } else {
-                            this.subMode = ((Mode) this.mode.getSubModes().get(0));
+                            this.subMode = ((PORISMode) this.mode.getSubModes().get(0));
                         }
                     }
                 }
                 // Este segundo pase por los submodos es para conseguir que al cargar la aplicación
                 // muestre el subModo correcto.
                 for (int i = 0; i < this.mode.getSubModes().size(); i++) {
-                    Mode thisChildMode = (Mode) this.mode.getSubModes().get(i);
+                    PORISMode thisChildMode = (PORISMode) this.mode.getSubModes().get(i);
                     for (int i2 = 0; i2 < this.getDestinations().size(); i2++) {
                         if (thisChildMode.getSystems().contains(((Cfg) this.getDestinations().get(i2)).getModel())) {
                             Cfg childCfg = (Cfg) this.getDestinations().get(i2);
