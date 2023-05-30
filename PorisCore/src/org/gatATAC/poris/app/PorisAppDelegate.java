@@ -2,8 +2,8 @@ package org.gatATAC.poris.app;
 
 import org.gatATAC.poris.Cfg;
 import org.gatATAC.poris.PORIS;
-import org.gatATAC.poris.SNodeLib;
-import org.gatATAC.poris.PORISSys;
+import org.gatATAC.poris.PORISLib;
+import org.gatATAC.poris.PORISNode;
 import java.io.File;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -22,9 +22,9 @@ import org.w3c.dom.Element;
  */
 public class PorisAppDelegate {
 
-    private final SNodeLib systemLib = new SNodeLib("System Library");
-    private final SNodeLib configLib = new SNodeLib("Config Library");
-    private PORISSys system;
+    private final PORISLib systemLib = new PORISLib("System Library");
+    private final PORISLib configLib = new PORISLib("Config Library");
+    private PORISNode system;
     private Cfg config;
     private final String instrumentFileName;
     private boolean modelLoaded;    
@@ -106,7 +106,7 @@ public class PorisAppDelegate {
      * 
      * @return
      */
-    public SNodeLib getConfigLib() {
+    public PORISLib getConfigLib() {
         return configLib;
     }
 
@@ -122,7 +122,7 @@ public class PorisAppDelegate {
      * 
      * @return
      */
-    public PORISSys getSystem() {
+    public PORISNode getSystem() {
         return system;
     }
 
@@ -130,7 +130,7 @@ public class PorisAppDelegate {
      * 
      * @return
      */
-    public SNodeLib getSystemLib() {
+    public PORISLib getSystemLib() {
         return systemLib;
     }
 
@@ -145,16 +145,16 @@ public class PorisAppDelegate {
             Element root = doc.getDocumentElement();
             systemLib.fromXML(root);
             //System.out.println("Total de " + sLib.size() + " instancias cargadas");
-            system = (PORISSys) systemLib.last();
+            system = (PORISNode) systemLib.last();
             //System.out.println("El objeto modelo es " + s);
             //System.out.print(" y");
             if (!system.isConsistent()) {
                 //System.out.print(" No");
             }
             //System.out.println(" es consistente");
-            //System.out.println("Sus valores son " + ((PORISSys) s).getValues());
-            //System.out.println("Sus hijos son " + ((PORISSys) s).getSubSystems());
-            //System.out.println("Sus modos son " + ((PORISSys) s).getModes());
+            //System.out.println("Sus valores son " + ((PORISNode) s).getValues());
+            //System.out.println("Sus hijos son " + ((PORISNode) s).getSubSystems());
+            //System.out.println("Sus modos son " + ((PORISNode) s).getModes());
             config = new Cfg(system);
             ArrayList<PORIS> aux = new ArrayList();
             if (config.subTree(aux)) {

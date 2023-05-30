@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <sub-systems-v4><value>
+      <poris><value>
   <id type="integer">503</id>
   <name>Tx2.0</name>
   <node-type-id type="integer">5</node-type-id>
@@ -88,7 +88,7 @@
   <name>TxMasks</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">13</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">503</id>
@@ -200,7 +200,7 @@
   <name>TxFilters</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">13</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">509</id>
@@ -314,7 +314,7 @@
   <name>TxDispersion</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">13</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">506</id>
@@ -475,7 +475,7 @@
   <name>TxBinning</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">13</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="Value">
       <id type="integer">513</id>
@@ -549,7 +549,7 @@
   <name>TxExpTime</name>
   <node-type-id type="integer">4</node-type-id>
   <project-id type="integer">13</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
     <destination type="ValueDoubleRange">
       <id type="integer">518</id>
@@ -626,12 +626,12 @@
   <name>TxDetector</name>
   <node-type-id type="integer">3</node-type-id>
   <project-id type="integer">13</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">512</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">517</id>
     </destination>
     <destination type="Mode">
@@ -721,18 +721,18 @@
   <name>TxTestInstrument</name>
   <node-type-id type="integer">2</node-type-id>
   <project-id type="integer">13</project-id>
-  <type>SubSystem</type>
+  <type>PORISNode</type>
   <destinations type="array">
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">499</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">500</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">501</id>
     </destination>
-    <destination type="SubSystem">
+    <destination type="PORISNode">
       <id type="integer">502</id>
     </destination>
     <destination type="Mode">
@@ -752,4 +752,4 @@
     </label>
   </labels>
 </sub-system>
-</sub-systems-v4>
+</poris>

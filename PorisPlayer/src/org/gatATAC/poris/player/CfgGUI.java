@@ -37,7 +37,7 @@ public class CfgGUI extends ViewController {
         boolean mayHaveFrame = (this.getCfg().getDestinations().size() > 1);
         if (!mayHaveFrame) {
             if (this.getCfg().getDestinations().size() > 0) {
-                if (((Cfg) this.getCfg().getDestinations().get(0)).getModel().isDescendantOf(PORISSys.class)) {
+                if (((Cfg) this.getCfg().getDestinations().get(0)).getModel().isDescendantOf(PORISNode.class)) {
                     mayHaveFrame = true;
                 }
             }
@@ -48,7 +48,7 @@ public class CfgGUI extends ViewController {
         boolean mayHaveLabel = showLabel || isGroup;
         this.panel = new CfgGUIPanel(this, mayHaveFrame && showFrame, this.getCfg().isHasValue(), mayHaveLabel, isGroup,this.showInvisible);
         String aux = "";
-        Value v = this.getCfg().getValue();
+        PORISValue v = this.getCfg().getValue();
         if (v != null) {
             ValueFormatter vf = v.getFormatter();
             if (vf != null) {
@@ -85,7 +85,7 @@ public class CfgGUI extends ViewController {
                 isWrapper = isWrapper && !this.getCfg().isHasValue();
                 isWrapper = isWrapper && !(this.getCfg().getModel().getSubSystems().size() > 1);
                 if (isWrapper) {
-                    isWrapper = ((PORISSys) this.getCfg().getModel().getSubSystems().get(0)).getSubSystems().size() <= 1;
+                    isWrapper = ((PORISNode) this.getCfg().getModel().getSubSystems().get(0)).getSubSystems().size() <= 1;
                 }
                 //System.out.println("El modelo "+this.getCfg().getModel()+" tiene "+this.getCfg().getModel().getSubSystems().size()+" hijos");
 
@@ -111,7 +111,7 @@ public class CfgGUI extends ViewController {
     @Override
     public void handleEvent() {
         if (this.getCfg().isHasValue()) {
-            Value valueToSet = (Value) this.panel.getValue();
+            PORISValue valueToSet = (PORISValue) this.panel.getValue();
             if (valueToSet != null && valueToSet.isConsistent()) {
                 this.getCfg().setValue(valueToSet);
                 super.handleEvent();
@@ -135,7 +135,7 @@ public class CfgGUI extends ViewController {
         this.panel.setMode(this.getCfg().getMode());
 
         String formatStr="";
-        Value v = this.getCfg().getValue();
+        PORISValue v = this.getCfg().getValue();
         if (v != null) {
             ValueFormatter vf = v.getFormatter();
             if (vf != null) {

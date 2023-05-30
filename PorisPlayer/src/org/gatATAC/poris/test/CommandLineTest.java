@@ -5,9 +5,9 @@
 package org.gatATAC.poris.test;
 
 import org.gatATAC.poris.PORIS;
-import org.gatATAC.poris.SNodeLib;
-import org.gatATAC.poris.SNodeXML;
-import org.gatATAC.poris.PORISSys;
+import org.gatATAC.poris.PORISLib;
+import org.gatATAC.poris.PORISXML;
+import org.gatATAC.poris.PORISNode;
 import java.util.ArrayList;
 
 /**
@@ -18,15 +18,15 @@ public class CommandLineTest {
 
     public static void main(String[] args) {
 
-        SNodeLib sLib=new SNodeLib("systems");
-        PORISSys s=GenCode.load();
+        PORISLib sLib=new PORISLib("systems");
+        PORISNode s=GenCode.load();
         ArrayList<PORIS> aux = new ArrayList();
         if (s.subTree(aux)) {
             sLib.addSNodes(aux);
         }
 
         // XML output
-        SNodeXML paramXML = new SNodeXML(sLib);
+        PORISXML paramXML = new PORISXML(sLib);
         System.out.println(paramXML.getXMLString());
     }
 }

@@ -38,7 +38,7 @@ public class PORIS extends Model {
      */
     protected ArrayList<PORIS> sources;
     private String label;
-    private ArrayList<SNodeAttribute> attributes;
+    private ArrayList<PORISAttribute> attributes;
     private int id;
     private int nodeTypeId;
     private boolean modeVisibleFlag = false;
@@ -51,7 +51,7 @@ public class PORIS extends Model {
         super(name);
         destinations = new ArrayList<PORIS>();
         sources = new ArrayList<PORIS>();
-        attributes = new ArrayList<SNodeAttribute>();
+        attributes = new ArrayList<PORISAttribute>();
         instanceList.add(this);
         this.label = name;
     }
@@ -60,7 +60,7 @@ public class PORIS extends Model {
      * 
      * @return
      */
-    public ArrayList<SNodeAttribute> getAttributes() {
+    public ArrayList<PORISAttribute> getAttributes() {
         return attributes;
     }
 
@@ -69,7 +69,7 @@ public class PORIS extends Model {
      * @param attr
      * @return
      */
-    public boolean addAttribute(SNodeAttribute attr) {
+    public boolean addAttribute(PORISAttribute attr) {
         boolean ret = false;
         if (!attributes.contains(attr)) {
             ret = attributes.add(attr);
@@ -535,7 +535,7 @@ public class PORIS extends Model {
                                 visible=Boolean.parseBoolean(Utils.getTextContent((Element)visibleNode));
                             }
                             content = Utils.getTextContent((Element) attrContentNode);
-                            SNodeAttribute attr=new SNodeAttribute(name,content,visible);
+                            PORISAttribute attr=new PORISAttribute(name,content,visible);
                             this.addAttribute(attr);
                             //System.out.println("+++++ Hemos añadido a "+this+" el atributo "+attr);
                         }

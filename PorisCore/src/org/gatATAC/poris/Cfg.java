@@ -21,17 +21,17 @@ public class Cfg extends PORIS {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5DE5B290-3135-1B97-632B-36674BAAE0EB]
     // </editor-fold> 
-    private PORISSys model;
-    private Value value;
+    private PORISNode model;
+    private PORISValue value;
     private boolean hasValue;
     private Data data;
     private static int idCounter = 1;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.4C1E880E-1DBB-9BE6-02B3-3199ADFA0075]
     // </editor-fold> 
-    private Mode mode;
+    private PORISMode mode;
     private ArrayList<PORIS> possibleModes;
-    private Mode subMode;
+    private PORISMode subMode;
 
     /**
      * 
@@ -46,7 +46,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public Mode getSubMode() {
+    public PORISMode getSubMode() {
         return subMode;
     }
 
@@ -54,7 +54,7 @@ public class Cfg extends PORIS {
      * 
      * @param subMode
      */
-    public void setSubMode(Mode subMode) {
+    public void setSubMode(PORISMode subMode) {
         this.subMode = subMode;
         notifyObs();
     }
@@ -66,40 +66,40 @@ public class Cfg extends PORIS {
     public Data getData() {
         if (this.data == null) {
             if (this.value != null){
-                if (this.value.implementsInterface(ValueDataInterface.class)) {
-                    if (this.value.isDescendantOf(ValueDoubleRange.class)) {
+                if (this.value.implementsInterface(PORISValueData.class)) {
+                    if (this.value.isDescendantOf(PORISValueFloat.class)) {
                         this.data = new DataDouble((ValueDoubleFormatter) this.value.getFormatter());
                     } else {
-                        if (this.value.isDescendantOf(ValueDateRange.class)) {
+                        if (this.value.isDescendantOf(PORISValueDate.class)) {
                             this.data = new DataDate((ValueDateFormatter) this.value.getFormatter());
                         } else {
                             this.data = new DataString();
                         }
                     }
-                    this.data.setDataValue(((ValueDataInterface) this.value).getDefaultValue());
+                    this.data.setDataValue(((PORISValueData) this.value).getDefaultValue());
                 }
             } else {
-                /* Value is not active, probably because the mode is not activating the param */
+                /* PORISValue is not active, probably because the mode is not activating the param */
                 /* null will be returned, nothing to do here */
             }
         } else {
             if (this.value != null){
-                if (this.value.implementsInterface(ValueDataInterface.class)) {
+                if (this.value.implementsInterface(PORISValueData.class)) {
                     if (!this.value.isValidFromStr(this.data.toString())) {
-                        if (this.value.isDescendantOf(ValueDoubleRange.class)) {
+                        if (this.value.isDescendantOf(PORISValueFloat.class)) {
                             this.data = new DataDouble((ValueDoubleFormatter) this.value.getFormatter());
                         } else {
-                            if (this.value.isDescendantOf(ValueDateRange.class)) {
+                            if (this.value.isDescendantOf(PORISValueDate.class)) {
                                 this.data = new DataDate((ValueDateFormatter) this.value.getFormatter());
                             } else {
                                 this.data = new DataString();
                             }
                         }
-                        this.data.setDataValue(((ValueDataInterface) this.value).getDefaultValue());
+                        this.data.setDataValue(((PORISValueData) this.value).getDefaultValue());
                     }
                 }
             } else {
-                /* Value is null, probably because a mode is not activating the param */
+                /* PORISValue is null, probably because a mode is not activating the param */
                 /* null will be returned, nothing to do here */
             }
         }
@@ -151,7 +151,7 @@ public class Cfg extends PORIS {
      * 
      * @param model
      */
-    public Cfg(PORISSys model) {
+    public Cfg(PORISNode model) {
         super(model.getName());
         //System.out.println("******* Inicio Creo el Cfg "+this);
         this.setId(0);
@@ -173,7 +173,7 @@ public class Cfg extends PORIS {
      * 
      * @param model
      */
-    public void setModel(PORISSys model) {
+    public void setModel(PORISNode model) {
         if (this.getId() == 0) {
             this.setId(idCounter++);
         }
@@ -191,9 +191,9 @@ public class Cfg extends PORIS {
             this.hasValue = false;
         }
         for (int i = 0; i < this.model.getSubSystems().size(); i++) {
-            ArrayList<PORIS> modesForChild = this.getModesForChild((PORISSys) this.model.getSubSystems().get(i));
+            ArrayList<PORIS> modesForChild = this.getModesForChild((PORISNode) this.model.getSubSystems().get(i));
 
-            Cfg newCfg = new Cfg((PORISSys) this.model.getSubSystems().get(i));
+            Cfg newCfg = new Cfg((PORISNode) this.model.getSubSystems().get(i));
             newCfg.setPossibleModes(modesForChild);
             if (modesForChild.size() < 1) {
                 //System.out.println("Voy a pasar la cfg " + this + " a modo nulo");
@@ -244,15 +244,15 @@ public class Cfg extends PORIS {
         return hasValue;
     }
 
-    private ArrayList<PORIS> getModesForChild(PORISSys child) {
+    private ArrayList<PORIS> getModesForChild(PORISNode child) {
         //System.out.println("En "+this+" y modo "+this.mode+" busco los modos para "+child);
         ArrayList<PORIS> ret = new ArrayList();
         for (int i = 0; i < this.mode.getSubModes().size(); i++) {
-            Mode thisMode = (Mode) this.mode.getSubModes().get(i);
+            PORISMode thisMode = (PORISMode) this.mode.getSubModes().get(i);
             //System.out.println("En el modo "+thisMode+" Miro el nodo "+child+" entre los sistemas "+thisMode.getSystems());
             if (thisMode.getSystems().contains(child)) {
                 //System.out.println("Añado el nodo "+thisMode);
-                ret.add((Mode) thisMode);
+                ret.add((PORISMode) thisMode);
             }
         }
 
@@ -275,7 +275,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public Mode getMode() {
+    public PORISMode getMode() {
         return mode;
     }
 
@@ -284,7 +284,7 @@ public class Cfg extends PORIS {
      * @param model
      * @return
      */
-    public Cfg getCfgForModel(PORISSys model) {
+    public Cfg getCfgForModel(PORISNode model) {
         for (int i = 0; i < this.getDestinations().size(); i++) {
             if (((Cfg) this.getDestinations().get(i)).model == model) {
                 return (Cfg) this.getDestinations().get(i);
@@ -298,7 +298,7 @@ public class Cfg extends PORIS {
      * @param model
      * @return
      */
-    public Cfg getDescendantForModel(PORISSys model) {
+    public Cfg getDescendantForModel(PORISNode model) {
         for (int i = 0; i < this.getDestinations().size(); i++) {
             if (((Cfg) this.getDestinations().get(i)).model == model) {
                 return (Cfg) this.getDestinations().get(i);
@@ -319,7 +319,7 @@ public class Cfg extends PORIS {
      * 
      * @param mode
      */
-    public void setMode(Mode mode) {
+    public void setMode(PORISMode mode) {
         if (this.mode != mode) {
             //System.out.println("En " + this + " intento poner el modo " + mode);
             this.mode = mode;
@@ -334,7 +334,7 @@ public class Cfg extends PORIS {
                 }
                 ArrayList<Cfg> childsForLoop = (ArrayList<Cfg>) this.getDestinations().clone();
                 for (int i = 0; i < this.mode.getSubModes().size(); i++) {
-                    Mode thisChildMode = (Mode) this.mode.getSubModes().get(i);
+                    PORISMode thisChildMode = (PORISMode) this.mode.getSubModes().get(i);
                     //System.out.println("++Trato el modo " + thisChildMode);
                     for (int i2 = 0; i2 < this.getDestinations().size(); i2++) {
                         if (thisChildMode.getSystems().contains(((Cfg) this.getDestinations().get(i2)).getModel())) {
@@ -358,14 +358,14 @@ public class Cfg extends PORIS {
                         if (this.mode.getSubModes().contains(this.mode.getDefaultSubMode())) {
                             this.subMode = (this.mode.getDefaultSubMode());
                         } else {
-                            this.subMode = ((Mode) this.mode.getSubModes().get(0));
+                            this.subMode = ((PORISMode) this.mode.getSubModes().get(0));
                         }
                     }
                 }
                 // Este segundo pase por los submodos es para conseguir que al cargar la aplicación
                 // muestre el subModo correcto.
                 for (int i = 0; i < this.mode.getSubModes().size(); i++) {
-                    Mode thisChildMode = (Mode) this.mode.getSubModes().get(i);
+                    PORISMode thisChildMode = (PORISMode) this.mode.getSubModes().get(i);
                     for (int i2 = 0; i2 < this.getDestinations().size(); i2++) {
                         if (thisChildMode.getSystems().contains(((Cfg) this.getDestinations().get(i2)).getModel())) {
                             Cfg childCfg = (Cfg) this.getDestinations().get(i2);
@@ -406,12 +406,12 @@ public class Cfg extends PORIS {
      * @param value
      * @return
      */
-    public boolean isValidValue(Value value) {
+    public boolean isValidValue(PORISValue value) {
         if (this.hasValue) {
             if (this.getMode()!= null){
                 ArrayList<PORIS> possibleValues = this.getMode().getValues();
                 for (int i = 0; i < possibleValues.size(); i++) {
-                    if (((Value) possibleValues.get(i)).isValid(value)) {
+                    if (((PORISValue) possibleValues.get(i)).isValid(value)) {
                         return true;
                     }
                 }
@@ -427,7 +427,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public PORISSys getSubSystem() {
+    public PORISNode getSubSystem() {
         return model;
     }
 
@@ -438,7 +438,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public Value getValue() {
+    public PORISValue getValue() {
         if (this.hasValue) {
             return value;
         }
@@ -452,7 +452,7 @@ public class Cfg extends PORIS {
      * 
      * @param value
      */
-    public void setValue(Value value) {
+    public void setValue(PORISValue value) {
         if (this.hasValue) {
             if (this.isValidValue(value)) {
                 if (this.value == null) {
@@ -498,7 +498,7 @@ public class Cfg extends PORIS {
                 // Add value
                 if (this.hasValue && this.value != null) {
                     ret.setAttribute("value", this.getValue().getName());
-                    if (this.value.implementsInterface(ValueDataInterface.class)) {
+                    if (this.value.implementsInterface(PORISValueData.class)) {
                         ret.setAttribute("dataValue", this.getData().toUnformattedString());
                     }
                 }
@@ -526,7 +526,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public PORISSys getModel() {
+    public PORISNode getModel() {
         return model;
     }
 

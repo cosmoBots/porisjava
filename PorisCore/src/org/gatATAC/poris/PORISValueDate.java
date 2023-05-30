@@ -16,7 +16,7 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class ValueDateRange extends Value implements ValueDataInterface<Date> {
+public class PORISValueDate extends PORISValue implements PORISValueData<Date> {
 
     private Date min, max, defaultValue;
 
@@ -27,7 +27,7 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
      * @param min
      * @param max
      */
-    public ValueDateRange(String name, Date defaultValue, Date min, Date max) {
+    public PORISValueDate(String name, Date defaultValue, Date min, Date max) {
         super(name);
         this.defaultValue = defaultValue;
         this.min = min;
@@ -39,7 +39,7 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
      * 
      * @param name
      */
-    public ValueDateRange(String name) {
+    public PORISValueDate(String name) {
         super(name);
     }
 
@@ -107,7 +107,7 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
 
     @Override
     public Object clone(String strValue) {
-        ValueDateRange ret2 = new ValueDateRange(this.getName(), this.defaultValue, this.min, this.max);
+        PORISValueDate ret2 = new PORISValueDate(this.getName(), this.defaultValue, this.min, this.max);
         return ret2;
     }
 
@@ -117,9 +117,9 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
      * @return
      */
     @Override
-    public Value getValueForString(String name) {
+    public PORISValue getValueForString(String name) {
         if (this.isValidFromStr(name)) {
-            return new ValueDateRange(name, this.defaultValue, this.min, this.max);
+            return new PORISValueDate(name, this.defaultValue, this.min, this.max);
         }
         return null;
     }
@@ -184,7 +184,7 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
     public boolean loadFromXML(Node node) {
         boolean ret = super.loadFromXML(node);
         // Name
-        //System.out.println("Ejecuto el codigo ValueDateRange.loadFromXML()");
+        //System.out.println("Ejecuto el codigo PORISValueDate.loadFromXML()");
         String defVal = getChildNodeWithName(node, "default-date").getTextContent();
         String maxVal = getChildNodeWithName(node, "date-max").getTextContent();
         String minVal = getChildNodeWithName(node, "date-min").getTextContent();
@@ -201,7 +201,7 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
      * @param min
      * @param max
      */
-    public ValueDateRange(ValueDateRange toClone, Date min, Date max) {
+    public PORISValueDate(PORISValueDate toClone, Date min, Date max) {
         this(toClone.getName(), toClone.defaultValue, min, max);
     }
 
@@ -215,7 +215,7 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
      * @param args
      */
     public static void main(String args[]) {
-        ValueDateRange expTime = new ValueDateRange("dateObs", new Date(), new Date(), new Date());
+        PORISValueDate expTime = new PORISValueDate("dateObs", new Date(), new Date(), new Date());
         System.out.println(expTime.toString());
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<sub-systems-v4 id="systems">
+<poris id="systems">
     <cfg dataValue="0.0" mode="RA_Normal" model="RA" value="raRange">
         <name>RA</name>
         <version type="float">0.0</version>
@@ -225,4 +225,4 @@
         </destinations>
         <node-attributes type="array"/>
     </cfg>
-</sub-systems-v4>
+</poris>

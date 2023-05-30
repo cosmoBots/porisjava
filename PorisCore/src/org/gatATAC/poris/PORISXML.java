@@ -26,7 +26,7 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class SNodeXML extends View {
+public class PORISXML extends View {
 
     private JTabbedPane mainPanel;
     private JTextArea xmlText;
@@ -42,7 +42,7 @@ public class SNodeXML extends View {
      * @param model
      * @param controller
      */
-    public SNodeXML(SNodeLib model, Controller controller) {
+    public PORISXML(PORISLib model, Controller controller) {
         super(model, controller);
         this.initComponents();
         System.err.println("Constructor 1");
@@ -53,7 +53,7 @@ public class SNodeXML extends View {
      * 
      * @param model
      */
-    public SNodeXML(SNodeLib model) {
+    public PORISXML(PORISLib model) {
         super(model);
         this.initComponents();
         System.err.println("Constructor 2");
@@ -132,47 +132,47 @@ public class SNodeXML extends View {
             } 
             catch (Exception exc)
             {
-                System.err.println("Excepción en newDocumentBuilder ["+exc.getLocalizedMessage()+"] al hacer SNodeXML.update");
+                System.err.println("Excepción en newDocumentBuilder ["+exc.getLocalizedMessage()+"] al hacer PORISXML.update");
             }
         }
         try
         {
             contador++;
-            System.err.println("Entro en SNodeXML.update por vez "+contador+" con el modelo "+this.getModel().getName());
+            System.err.println("Entro en PORISXML.update por vez "+contador+" con el modelo "+this.getModel().getName());
             doc = db.newDocument();
             Node osiXML = null;
-            osiXML = ((SNodeLib)this.getModel()).toXML(doc);
+            osiXML = ((PORISLib)this.getModel()).toXML(doc);
             if (osiXML!=null) {
                 try {
                 doc.appendChild(osiXML);
                 } catch (Exception e) {
-                    System.err.println("SNodeXML.update: No sabemos por qué ocurre esta excepción: "+e.getLocalizedMessage()+" en el nodo "+osiXML);
+                    System.err.println("PORISXML.update: No sabemos por qué ocurre esta excepción: "+e.getLocalizedMessage()+" en el nodo "+osiXML);
                 }
                 XMLTreeModel treeModel = new XMLTreeModel(osiXML);
                 this.xmlTree.setModel(treeModel);
                 this.xmlTree.updateUI();
-                System.err.println("SNodeXML.update: 1");
+                System.err.println("PORISXML.update: 1");
                 // This transforms the xml to string
                 TransformerFactory tf = TransformerFactory.newInstance();
                 Transformer transformer = tf.newTransformer();
                 transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-                System.err.println("SNodeXML.update: 2");                
+                System.err.println("PORISXML.update: 2");                
                 DOMSource source = new DOMSource(doc);
                 StringWriter sw = new StringWriter();
-                System.err.println("SNodeXML.update: 3");                
+                System.err.println("PORISXML.update: 3");                
                 //StreamResult result = new StreamResult("/home/txinto/result.xml");
                 StreamResult result = new StreamResult(sw);
                 transformer.transform(source, result);
                 String staux = sw.toString();
-                System.err.println("SNodeXML.update: 4");                
+                System.err.println("PORISXML.update: 4");                
 
                 xmlText.setText(staux);
-                System.err.println("SNodeXML.update: 5");                
+                System.err.println("PORISXML.update: 5");                
             }
         }
         catch (Exception exc)
         {
-            System.err.println("SNodeXML.update ["+exc.getLocalizedMessage()+"]");
+            System.err.println("PORISXML.update ["+exc.getLocalizedMessage()+"]");
         }
         mainPanel.updateUI();
         xmlText.updateUI();

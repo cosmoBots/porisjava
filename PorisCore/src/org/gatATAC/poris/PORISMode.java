@@ -13,16 +13,16 @@ import org.w3c.dom.Node;
  *
  * @author osiris
  */
-public class Mode extends PORIS {
+public class PORISMode extends PORIS {
 
-    private Value defaultValue;
-    private Mode defaultSubMode;
+    private PORISValue defaultValue;
+    private PORISMode defaultSubMode;
 
     /**
      * 
      * @param name
      */
-    public Mode(String name) {
+    public PORISMode(String name) {
         super(name);
     }
 
@@ -48,7 +48,7 @@ public class Mode extends PORIS {
      * 
      * @param sm
      */
-    public void addSubMode(Mode sm) {
+    public void addSubMode(PORISMode sm) {
         this.addDestination(sm);
     }
 
@@ -56,7 +56,7 @@ public class Mode extends PORIS {
      * 
      * @param v
      */
-    public void addValue(Value v) {
+    public void addValue(PORISValue v) {
         this.addDestination(v);
     }
 
@@ -64,7 +64,7 @@ public class Mode extends PORIS {
      * 
      * @return
      */
-    public Mode getDefaultSubMode() {
+    public PORISMode getDefaultSubMode() {
         return defaultSubMode;
     }
 
@@ -72,7 +72,7 @@ public class Mode extends PORIS {
      * 
      * @param defaultSubMode
      */
-    public void setDefaultSubMode(Mode defaultSubMode) {
+    public void setDefaultSubMode(PORISMode defaultSubMode) {
         if (this.defaultSubMode != defaultSubMode) {
             this.defaultSubMode = defaultSubMode;
             notifyObs();
@@ -83,7 +83,7 @@ public class Mode extends PORIS {
      * 
      * @return
      */
-    public Value getDefaultValue() {
+    public PORISValue getDefaultValue() {
         return defaultValue;
     }
 
@@ -91,7 +91,7 @@ public class Mode extends PORIS {
      * 
      * @param defaultValue
      */
-    public void setDefaultValue(Value defaultValue) {
+    public void setDefaultValue(PORISValue defaultValue) {
         if (this.defaultValue != defaultValue) {
             this.defaultValue = defaultValue;
             notifyObs();
@@ -103,7 +103,7 @@ public class Mode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getSubModes() {
-        return getFromListByClass(this.destinations, Mode.class);
+        return getFromListByClass(this.destinations, PORISMode.class);
     }
 
     /**
@@ -111,7 +111,7 @@ public class Mode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getSuperModes() {
-        return getFromListByClass(this.sources, Mode.class);
+        return getFromListByClass(this.sources, PORISMode.class);
     }
 
     /**
@@ -119,7 +119,7 @@ public class Mode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getSystems() {
-        return getFromListByClass(this.sources, PORISSys.class);
+        return getFromListByClass(this.sources, PORISNode.class);
     }
 
     /**
@@ -127,7 +127,7 @@ public class Mode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getValues() {
-        return getFromListByClass(this.destinations, Value.class);
+        return getFromListByClass(this.destinations, PORISValue.class);
     }
 
     /**
@@ -135,10 +135,10 @@ public class Mode extends PORIS {
      * @param name
      * @return
      */
-    public Mode getSubModeFromName(String name) {
+    public PORISMode getSubModeFromName(String name) {
         for (int i = 0; i < this.getSubModes().size(); i++) {
-            if (((Mode) this.getSubModes().get(i)).getName().equals(name)) {
-                return ((Mode) this.getSubModes().get(i));
+            if (((PORISMode) this.getSubModes().get(i)).getName().equals(name)) {
+                return ((PORISMode) this.getSubModes().get(i));
             }
         }
         return null;
@@ -149,10 +149,10 @@ public class Mode extends PORIS {
      * @param name
      * @return
      */
-    public Value getValueFromName(String name) {
+    public PORISValue getValueFromName(String name) {
         for (int i = 0; i < this.getValues().size(); i++) {
             if (this.getValues().get(i).getName().equals(name)) {
-                return (Value) this.getValues().get(i);
+                return (PORISValue) this.getValues().get(i);
             }
         }
         return null;
@@ -164,13 +164,13 @@ public class Mode extends PORIS {
      */
     @Override
     public void addDestination(PORIS child) {
-        if (child.isDescendantOf(Mode.class) &&
+        if (child.isDescendantOf(PORISMode.class) &&
                 this.getDefaultSubMode() == null) {
-            this.defaultSubMode = (Mode) child;
+            this.defaultSubMode = (PORISMode) child;
         } else {
-            if (child.isDescendantOf(Value.class) &&
+            if (child.isDescendantOf(PORISValue.class) &&
                     this.getDefaultValue() == null) {
-                this.defaultValue = (Value) child;
+                this.defaultValue = (PORISValue) child;
             }
         }
         super.addDestination(child);
@@ -188,14 +188,14 @@ public class Mode extends PORIS {
         //System.out.println("Ejecuto el codigo ValueDoubleRange.loadFromXML()");
         String defVal = getChildNodeWithName(node, "default-value-id").getTextContent();
         if (defVal != null) {
-            Value newVal = (Value) xmlLoaderHashMap.get(defVal);
+            PORISValue newVal = (PORISValue) xmlLoaderHashMap.get(defVal);
             if (newVal != null) {
                 this.setDefaultValue(newVal);
             }
         }
         String defMod = getChildNodeWithName(node, "default-mode-id").getTextContent();
         if (defMod != null) {
-            Mode newMod = (Mode) xmlLoaderHashMap.get(defMod);
+            PORISMode newMod = (PORISMode) xmlLoaderHashMap.get(defMod);
             if (newMod != null) {
                 //System.out.println("En el modo "+this+" he añadido el modo por defecto " + newMod);
                 this.setDefaultSubMode(newMod);

@@ -12,7 +12,7 @@ import org.w3c.dom.Node;
  * 
  * @author txinto
  */
-public class Value extends PORIS {
+public class PORISValue extends PORIS {
 
     private String description;
     private ValueFormatter formatter;
@@ -24,7 +24,7 @@ public class Value extends PORIS {
      * 
      * @param name
      */
-    public Value(String name) {
+    public PORISValue(String name) {
         super(name);
     }
 
@@ -35,7 +35,7 @@ public class Value extends PORIS {
      */
     @Override
     public Object clone(String name) {
-        return new Value(name);
+        return new PORISValue(name);
     }
 
     /**
@@ -46,12 +46,12 @@ public class Value extends PORIS {
     @Override
     public boolean loadFromXML(Node node) {
         boolean ret = super.loadFromXML(node);
-        // Value Formatter Id
+        // PORISValue Formatter Id
         String instanceFormatterId = Utils.getTextContent((Element) getChildNodeWithName(node, "value-formatter-id"));
         if (instanceFormatterId != null) {
             this.formatter = ValueFormatter.getFormatterForId(Integer.parseInt(instanceFormatterId));
         }
-        //System.out.println("Ejecuto el codigo Value.loadFromXML()");
+        //System.out.println("Ejecuto el codigo PORISValue.loadFromXML()");
         return ret;
     }
 
@@ -77,7 +77,7 @@ public class Value extends PORIS {
      * @param value
      * @return
      */
-    public boolean isValid(Value value) {
+    public boolean isValid(PORISValue value) {
         return this.equals(value);
     }
 
@@ -86,7 +86,7 @@ public class Value extends PORIS {
      * @param name
      * @return
      */
-    public Value getValueForString(String name) {
+    public PORISValue getValueForString(String name) {
         if (this.getName().equals(name)) {
             return this;
         }

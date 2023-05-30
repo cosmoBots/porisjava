@@ -16,7 +16,7 @@ import org.w3c.dom.NodeList;
  *
  * @author txinto
  */
-public class SNodeLib extends Model {
+public class PORISLib extends Model {
 
     private final ArrayList<PORIS> nodeList;
 
@@ -24,7 +24,7 @@ public class SNodeLib extends Model {
      * 
      * @param name
      */
-    public SNodeLib(String name) {
+    public PORISLib(String name) {
         super(name);
         nodeList = new ArrayList();
     }

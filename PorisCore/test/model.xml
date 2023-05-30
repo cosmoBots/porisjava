@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <sub-systems-v4><value>
+      <poris><value>
   <id type="integer">477</id>
   <name>Red</name>
   <node-type-id type="integer">5</node-type-id>
@@ -76,4 +76,4 @@
     </destination>
   </destinations>
 </sub-system>
-</sub-systems-v4>
+</poris>

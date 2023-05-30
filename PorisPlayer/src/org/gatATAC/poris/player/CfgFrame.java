@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import org.gatATAC.poris.Cfg;
-import org.gatATAC.poris.SNodeLib;
-import org.gatATAC.poris.SNodeXML;
-import org.gatATAC.poris.PORISSys;
+import org.gatATAC.poris.PORISLib;
+import org.gatATAC.poris.PORISXML;
+import org.gatATAC.poris.PORISNode;
 import org.gatATAC.poris.player.app.AboutBox;
 import org.gatATAC.poris.player.app.PorisGUIAppDelegate;
 
@@ -271,9 +271,9 @@ public class CfgFrame extends javax.swing.JFrame {
         return this.delegate.getApplicationDetails();
     }
     
-    private JTabbedPane loadModelIntoResult(SNodeLib modelToLoad, String title, JPanel mainPanel, JTabbedPane resultPanel, int position) {
+    private JTabbedPane loadModelIntoResult(PORISLib modelToLoad, String title, JPanel mainPanel, JTabbedPane resultPanel, int position) {
         // Represent the modelToLoad in the result panel
-        SNodeXML modelXML = new SNodeXML(modelToLoad);
+        PORISXML modelXML = new PORISXML(modelToLoad);
         if (resultPanel != null) {
             mainPanel.remove(resultPanel);
         }
@@ -292,13 +292,13 @@ public class CfgFrame extends javax.swing.JFrame {
         return resultPanel;
     }
 
-    public void loadSystemIntoResult(SNodeLib systemLib, PORISSys system){
+    public void loadSystemIntoResult(PORISLib systemLib, PORISNode system){
                 loadModelIntoResult(systemLib, system.toString(), xmlSystemFrame.mainPanel, xmlSystemFrame.resultPanel, 1);
                 xmlSystemFrame.mainPanel.setMinimumSize(new java.awt.Dimension(200, 200));
                 xmlSystemFrame.setMinimumSize(new java.awt.Dimension(400, 400));
                 xmlSystemFrame.setTitle("XML Model de " + system);
     }
-    public void loadConfigIntoResult(SNodeLib configLib, Cfg config){
+    public void loadConfigIntoResult(PORISLib configLib, Cfg config){
                 loadModelIntoResult(configLib, "Configuracion de " + config, xmlConfigFrame.mainPanel, xmlConfigFrame.resultPanel, 1);
                 xmlConfigFrame.mainPanel.setMinimumSize(new java.awt.Dimension(200, 200));
                 xmlConfigFrame.setMinimumSize(new java.awt.Dimension(400, 400));

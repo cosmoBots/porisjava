@@ -6,8 +6,8 @@
 package org.gatATAC.poris.player;
 
 import org.gatATAC.poris.PORIS;
-import org.gatATAC.poris.Value;
-import org.gatATAC.poris.ValueDataInterface;
+import org.gatATAC.poris.PORISValue;
+import org.gatATAC.poris.PORISValueData;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.io.File;
@@ -25,7 +25,7 @@ import org.gatATAC.poris.ValueFilePath;
 public class ValueGUICell extends javax.swing.JPanel {
     
     private final CfgGUI gui;
-    private Value value;
+    private PORISValue value;
     private Component valueCell;
     private javax.swing.JButton attrButton;
     private javax.swing.JButton fileButton;
@@ -43,7 +43,7 @@ public class ValueGUICell extends javax.swing.JPanel {
         return this.gui;
     }
     
-    public void setValue(Value value) {
+    public void setValue(PORISValue value) {
         if (this.value != value) {
             this.value = value;
             if (valueCell == null && value != null) {
@@ -53,13 +53,13 @@ public class ValueGUICell extends javax.swing.JPanel {
         this.update();
     }
     
-    public Value getValue() {
+    public PORISValue getValue() {
         return this.value;
     }
     
     private void cellComboActionPerformed(java.awt.event.ActionEvent evt) {
-        if (this.value != (Value) ((JComboBox) valueCell).getSelectedItem()) {
-            this.value = (Value) ((JComboBox) valueCell).getSelectedItem();
+        if (this.value != (PORISValue) ((JComboBox) valueCell).getSelectedItem()) {
+            this.value = (PORISValue) ((JComboBox) valueCell).getSelectedItem();
             this.gui.handleEvent();
         }
     }
@@ -98,7 +98,7 @@ public class ValueGUICell extends javax.swing.JPanel {
                 this.remove(valueCell);
             }
             if (this.value != null) {
-                if (value.implementsInterface(ValueDataInterface.class)) {
+                if (value.implementsInterface(PORISValueData.class)) {
                     valueCell = new javax.swing.JTextField();
                     ((JTextField) valueCell).setText(this.gui.getCfg().getData().toString());
                     ((JTextField) valueCell).addActionListener(new java.awt.event.ActionListener() {
@@ -211,7 +211,7 @@ public class ValueGUICell extends javax.swing.JPanel {
         if (choices.size() > 0) {
             if (this.valueCell == null) {
                 if (value == null) {
-                    value = (Value) choices.get(0);
+                    value = (PORISValue) choices.get(0);
                 }
                 addCell();
             }
@@ -230,7 +230,7 @@ public class ValueGUICell extends javax.swing.JPanel {
     
     private void update() {
         if (this.value != null) {
-            if (this.value.implementsInterface(ValueDataInterface.class)) {
+            if (this.value.implementsInterface(PORISValueData.class)) {
                 if (this.valueCell.getClass() != JTextField.class) {
                     addCell();
                 }

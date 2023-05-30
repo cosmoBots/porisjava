@@ -12,15 +12,15 @@
 
     <?xml version="1.0"?>
 
-    <!DOCTYPE sub-systems-v4 SYSTEM "SubSystemsV4.dtd">
+    <!DOCTYPE poris SYSTEM "SubSystemsV4.dtd">
 
-    <sub-systems-v4>
+    <poris>
     ...
-    </sub-systems-v4>
+    </poris>
 -->
 
 <!--- Put your DTDDoc comment here. -->
-<!ELEMENT sub-systems-v4 (group|value-data|value|sub-system|mode|value-double-range)*>
+<!ELEMENT poris (group|value-data|value|sub-system|mode|value-double-range)*>
 
 <!--- Put your DTDDoc comment here. -->
 <!ELEMENT value-double-range (labels|destinations|version|type|rangemin|rangemax|node-type-id|name|defaultFloat)*>

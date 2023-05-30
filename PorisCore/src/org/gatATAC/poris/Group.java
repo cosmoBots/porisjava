@@ -11,7 +11,7 @@ import org.w3c.dom.Node;
  *
  * @author osiris
  */
-public class Group extends PORISSys {
+public class Group extends PORISNode {
     /**
      * 
      * @param name
