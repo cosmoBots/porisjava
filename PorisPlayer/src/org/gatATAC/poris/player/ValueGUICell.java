@@ -16,7 +16,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JTextField;
-import org.gatATAC.poris.ValueFilePath;
+import org.gatATAC.poris.PORISValueFilePath;
 
 /**
  *
@@ -158,7 +158,7 @@ public class ValueGUICell extends javax.swing.JPanel {
                     });
                     add(attrButton, gridBagConstraints);
                 }
-                if (value.getClass() == ValueFilePath.class) {
+                if (value.getClass() == PORISValueFilePath.class) {
                     fileButton = new javax.swing.JButton();
                     fileButton.setText("f"); // NOI18N
                     fileButton.setName("fileButton"); // NOI18N
@@ -191,10 +191,10 @@ public class ValueGUICell extends javax.swing.JPanel {
     
     private void fileButtonActionPerformed(java.awt.event.ActionEvent evt) {
         JFileChooser chooser = new JFileChooser();
-        chooser.setDialogTitle("Choose the file with "+((ValueFilePath)this.value).getFileExtension()+" extension");
+        chooser.setDialogTitle("Choose the file with "+((PORISValueFilePath)this.value).getFileExtension()+" extension");
         chooser.setCurrentDirectory(new File("."));
 
-        FileExtensionFilter filter = new FileExtensionFilter(((ValueFilePath)this.value).getFileExtension(), ((ValueFilePath)this.value).getFileExtension()+" file.");
+        FileExtensionFilter filter = new FileExtensionFilter(((PORISValueFilePath)this.value).getFileExtension(), ((PORISValueFilePath)this.value).getFileExtension()+" file.");
         chooser.setFileFilter(filter);
         int returnVal = chooser.showOpenDialog(null);
         if (returnVal == JFileChooser.APPROVE_OPTION) {

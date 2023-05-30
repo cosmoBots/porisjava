@@ -6,7 +6,7 @@
         <name>PreImagingFile</name>
         <node-type-id type="integer">5</node-type-id>
         <project-id type="integer">17</project-id>
-        <type>ValueFilePath</type>
+        <type>PORISValueFilePath</type>
         <value-formatter-id type="integer" nil="true"></value-formatter-id>
         <destinations type="array"/>
         <labels type="array"/>

@@ -12,12 +12,12 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class ValueFilePath extends PORISValueString implements PORISValueData<String>{
+public class PORISValueFilePath extends PORISValueString implements PORISValueData<String>{
 
     private String fileExtension;
     private String fileDescription;
 
-    public ValueFilePath(String name, String defaultValue, String fileExtension) {
+    public PORISValueFilePath(String name, String defaultValue, String fileExtension) {
         super(name, defaultValue);
         this.fileExtension = fileExtension;
     }
@@ -25,13 +25,13 @@ public class ValueFilePath extends PORISValueString implements PORISValueData<St
      * 
      * @param name
      */
-    public ValueFilePath(String name) {
+    public PORISValueFilePath(String name) {
         super(name);
     }
 
     @Override
     public Object clone(String strValue) {
-        return new ValueFilePath(this.getName(), strValue, this.fileExtension);
+        return new PORISValueFilePath(this.getName(), strValue, this.fileExtension);
     }
 
     public String getFileExtension() {
