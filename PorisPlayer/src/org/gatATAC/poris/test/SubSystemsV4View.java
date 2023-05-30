@@ -8,8 +8,8 @@ import org.gatATAC.poris.player.CfgGUI;
 import org.gatATAC.poris.player.CfgFrame;
 import org.gatATAC.poris.player.CfgXMLFrame;
 import org.gatATAC.poris.PORIS;
-import org.gatATAC.poris.SNodeLib;
-import org.gatATAC.poris.SNodeXML;
+import org.gatATAC.poris.PORISLib;
+import org.gatATAC.poris.PORISXML;
 import org.gatATAC.poris.PORISNode;
 import org.jdesktop.application.Action;
 import org.jdesktop.application.ResourceMap;
@@ -40,8 +40,8 @@ public class SubSystemsV4View extends FrameView {
     CfgXMLFrame cfgXMLFrame = new CfgXMLFrame();
     CfgXMLFrame cfgXMLCfgFrame = new CfgXMLFrame();
     CfgFrame cfgFrame = new CfgFrame();
-    private SNodeLib sLib = new SNodeLib("systems");
-    private SNodeLib cLib = new SNodeLib("configs");
+    private PORISLib sLib = new PORISLib("systems");
+    private PORISLib cLib = new PORISLib("configs");
     private PORIS s;
     private PORIS c;
 
@@ -328,9 +328,9 @@ public class SubSystemsV4View extends FrameView {
         setStatusBar(statusPanel);
     }// </editor-fold>//GEN-END:initComponents
 
-    private JTabbedPane loadModelIntoResult(SNodeLib modelToLoad, String title, JPanel mainPanel, JTabbedPane resultPanel, int position) {
+    private JTabbedPane loadModelIntoResult(PORISLib modelToLoad, String title, JPanel mainPanel, JTabbedPane resultPanel, int position) {
         // Represent the modelToLoad in the result panel
-        SNodeXML modelXML = new SNodeXML(modelToLoad);
+        PORISXML modelXML = new PORISXML(modelToLoad);
         if (resultPanel != null) {
             mainPanel.remove(resultPanel);
         }
@@ -429,7 +429,7 @@ public class SubSystemsV4View extends FrameView {
 }//GEN-LAST:event_injMdlActionPerformed
 
     private void xtMdlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xtMdlActionPerformed
-        SNodeXML modelXML = new SNodeXML(sLib);
+        PORISXML modelXML = new PORISXML(sLib);
         xmlText.setText(modelXML.getXMLString());
 }//GEN-LAST:event_xtMdlActionPerformed
 
@@ -458,7 +458,7 @@ public class SubSystemsV4View extends FrameView {
 }//GEN-LAST:event_injCfgActionPerformed
 
     private void xtCfgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xtCfgActionPerformed
-        SNodeXML modelXML = new SNodeXML(cLib);
+        PORISXML modelXML = new PORISXML(cLib);
         xmlText.setText(modelXML.getXMLString());
 }//GEN-LAST:event_xtCfgActionPerformed
 

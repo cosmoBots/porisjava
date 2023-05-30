@@ -2,7 +2,7 @@ package org.gatATAC.poris.app;
 
 import org.gatATAC.poris.Cfg;
 import org.gatATAC.poris.PORIS;
-import org.gatATAC.poris.SNodeLib;
+import org.gatATAC.poris.PORISLib;
 import org.gatATAC.poris.PORISNode;
 import java.io.File;
 import java.util.ArrayList;
@@ -22,8 +22,8 @@ import org.w3c.dom.Element;
  */
 public class PorisAppDelegate {
 
-    private final SNodeLib systemLib = new SNodeLib("System Library");
-    private final SNodeLib configLib = new SNodeLib("Config Library");
+    private final PORISLib systemLib = new PORISLib("System Library");
+    private final PORISLib configLib = new PORISLib("Config Library");
     private PORISNode system;
     private Cfg config;
     private final String instrumentFileName;
@@ -106,7 +106,7 @@ public class PorisAppDelegate {
      * 
      * @return
      */
-    public SNodeLib getConfigLib() {
+    public PORISLib getConfigLib() {
         return configLib;
     }
 
@@ -130,7 +130,7 @@ public class PorisAppDelegate {
      * 
      * @return
      */
-    public SNodeLib getSystemLib() {
+    public PORISLib getSystemLib() {
         return systemLib;
     }
 

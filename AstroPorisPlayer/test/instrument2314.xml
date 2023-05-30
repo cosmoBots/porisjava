@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <sub-systems-v4><value>
+      <poris><value>
   <id type="integer">537</id>
   <name>R300B</name>
   <node-type-id type="integer">5</node-type-id>
@@ -3799,4 +3799,4 @@
   </labels>
   <node-attributes type="array"/>
 </sub-system>
-</sub-systems-v4>
+</poris>

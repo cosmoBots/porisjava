@@ -9,7 +9,7 @@ package org.gatATAC.poris;
  *
  * @author txinto
  */
-public class SNodeAttribute {
+public class PORISAttribute {
     private String name;
     private String content;
     private boolean visible;
@@ -68,7 +68,7 @@ public class SNodeAttribute {
      * @param content
      * @param isVisible
      */
-    public SNodeAttribute(String name, String content, boolean isVisible) {
+    public PORISAttribute(String name, String content, boolean isVisible) {
         this.name = name;
         this.content = content;
         this.visible = isVisible;

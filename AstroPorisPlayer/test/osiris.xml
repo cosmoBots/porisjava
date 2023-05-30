@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sub-systems-v4>
+<poris>
 	<value>
 		<id type="integer">3678</id>
 		<ident>OSI-0017</ident>
@@ -9060,4 +9060,4 @@
 		<node-attributes type="array"/>
 		<labels type="array"/>
 	</sub-system>
-</sub-systems-v4>
+</poris>

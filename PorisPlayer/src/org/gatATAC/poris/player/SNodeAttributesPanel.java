@@ -11,7 +11,7 @@
 package org.gatATAC.poris.player;
 
 import org.gatATAC.poris.PORIS;
-import org.gatATAC.poris.SNodeAttribute;
+import org.gatATAC.poris.PORISAttribute;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -37,11 +37,11 @@ public class SNodeAttributesPanel extends javax.swing.JFrame implements Observer
     public SNodeAttributesPanel() {
         this.showInvisible = false;
         node = new PORIS("testNode");
-        node.addAttribute(new SNodeAttribute("1", "uno", true));
-        node.addAttribute(new SNodeAttribute("2", "dos", false));
-        node.addAttribute(new SNodeAttribute("3", "tres", true));
-        node.addAttribute(new SNodeAttribute("4", "cuatro", false));
-        node.addAttribute(new SNodeAttribute("5", "cinco", true));
+        node.addAttribute(new PORISAttribute("1", "uno", true));
+        node.addAttribute(new PORISAttribute("2", "dos", false));
+        node.addAttribute(new PORISAttribute("3", "tres", true));
+        node.addAttribute(new PORISAttribute("4", "cuatro", false));
+        node.addAttribute(new PORISAttribute("5", "cinco", true));
         initComponents();
         initRows(node);
     }
@@ -52,7 +52,7 @@ public class SNodeAttributesPanel extends javax.swing.JFrame implements Observer
         int visibleRows = 0;
         if (!this.showInvisible) {
             for (int i = 0; i < rowCount; i++) {
-                SNodeAttribute thisAttr = node.getAttributes().get(i);
+                PORISAttribute thisAttr = node.getAttributes().get(i);
                 if (thisAttr.isVisible()) {
                     visibleRows++;
                 }
@@ -64,7 +64,7 @@ public class SNodeAttributesPanel extends javax.swing.JFrame implements Observer
         Object[][] cells = new Object[visibleRows][2];
         int currentCell=0;
         for (int i = 0; i < visibleRows; i++) {
-            SNodeAttribute thisAttr = node.getAttributes().get(i);
+            PORISAttribute thisAttr = node.getAttributes().get(i);
             if (thisAttr.isVisible()) {
                 cells[currentCell][0] = thisAttr.getName();
                 cells[currentCell][1] = thisAttr.getContent();
