@@ -48,7 +48,7 @@ public class CfgGUI extends ViewController {
         boolean mayHaveLabel = showLabel || isGroup;
         this.panel = new CfgGUIPanel(this, mayHaveFrame && showFrame, this.getCfg().isHasValue(), mayHaveLabel, isGroup,this.showInvisible);
         String aux = "";
-        Value v = this.getCfg().getValue();
+        PORISValue v = this.getCfg().getValue();
         if (v != null) {
             ValueFormatter vf = v.getFormatter();
             if (vf != null) {
@@ -111,7 +111,7 @@ public class CfgGUI extends ViewController {
     @Override
     public void handleEvent() {
         if (this.getCfg().isHasValue()) {
-            Value valueToSet = (Value) this.panel.getValue();
+            PORISValue valueToSet = (PORISValue) this.panel.getValue();
             if (valueToSet != null && valueToSet.isConsistent()) {
                 this.getCfg().setValue(valueToSet);
                 super.handleEvent();
@@ -135,7 +135,7 @@ public class CfgGUI extends ViewController {
         this.panel.setMode(this.getCfg().getMode());
 
         String formatStr="";
-        Value v = this.getCfg().getValue();
+        PORISValue v = this.getCfg().getValue();
         if (v != null) {
             ValueFormatter vf = v.getFormatter();
             if (vf != null) {

@@ -16,7 +16,7 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class ValueDateRange extends Value implements ValueDataInterface<Date> {
+public class ValueDateRange extends PORISValue implements ValueDataInterface<Date> {
 
     private Date min, max, defaultValue;
 
@@ -117,7 +117,7 @@ public class ValueDateRange extends Value implements ValueDataInterface<Date> {
      * @return
      */
     @Override
-    public Value getValueForString(String name) {
+    public PORISValue getValueForString(String name) {
         if (this.isValidFromStr(name)) {
             return new ValueDateRange(name, this.defaultValue, this.min, this.max);
         }

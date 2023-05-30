@@ -64,11 +64,11 @@ public class CfgGUIPanel extends javax.swing.JPanel {
         numPanelsAdded++;
     }
 
-    public Value getValue() {
+    public PORISValue getValue() {
         return this.value.getValue();
     }
 
-    public void setValue(Value value) {
+    public void setValue(PORISValue value) {
         this.value.setValue(value);
     }
 

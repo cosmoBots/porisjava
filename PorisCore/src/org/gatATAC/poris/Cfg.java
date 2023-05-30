@@ -22,7 +22,7 @@ public class Cfg extends PORIS {
     // #[regen=yes,id=DCE.5DE5B290-3135-1B97-632B-36674BAAE0EB]
     // </editor-fold> 
     private PORISNode model;
-    private Value value;
+    private PORISValue value;
     private boolean hasValue;
     private Data data;
     private static int idCounter = 1;
@@ -79,7 +79,7 @@ public class Cfg extends PORIS {
                     this.data.setDataValue(((ValueDataInterface) this.value).getDefaultValue());
                 }
             } else {
-                /* Value is not active, probably because the mode is not activating the param */
+                /* PORISValue is not active, probably because the mode is not activating the param */
                 /* null will be returned, nothing to do here */
             }
         } else {
@@ -99,7 +99,7 @@ public class Cfg extends PORIS {
                     }
                 }
             } else {
-                /* Value is null, probably because a mode is not activating the param */
+                /* PORISValue is null, probably because a mode is not activating the param */
                 /* null will be returned, nothing to do here */
             }
         }
@@ -406,12 +406,12 @@ public class Cfg extends PORIS {
      * @param value
      * @return
      */
-    public boolean isValidValue(Value value) {
+    public boolean isValidValue(PORISValue value) {
         if (this.hasValue) {
             if (this.getMode()!= null){
                 ArrayList<PORIS> possibleValues = this.getMode().getValues();
                 for (int i = 0; i < possibleValues.size(); i++) {
-                    if (((Value) possibleValues.get(i)).isValid(value)) {
+                    if (((PORISValue) possibleValues.get(i)).isValid(value)) {
                         return true;
                     }
                 }
@@ -438,7 +438,7 @@ public class Cfg extends PORIS {
      * 
      * @return
      */
-    public Value getValue() {
+    public PORISValue getValue() {
         if (this.hasValue) {
             return value;
         }
@@ -452,7 +452,7 @@ public class Cfg extends PORIS {
      * 
      * @param value
      */
-    public void setValue(Value value) {
+    public void setValue(PORISValue value) {
         if (this.hasValue) {
             if (this.isValidValue(value)) {
                 if (this.value == null) {

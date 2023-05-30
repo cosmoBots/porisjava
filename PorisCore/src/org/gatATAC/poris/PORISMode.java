@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
  */
 public class PORISMode extends PORIS {
 
-    private Value defaultValue;
+    private PORISValue defaultValue;
     private PORISMode defaultSubMode;
 
     /**
@@ -56,7 +56,7 @@ public class PORISMode extends PORIS {
      * 
      * @param v
      */
-    public void addValue(Value v) {
+    public void addValue(PORISValue v) {
         this.addDestination(v);
     }
 
@@ -83,7 +83,7 @@ public class PORISMode extends PORIS {
      * 
      * @return
      */
-    public Value getDefaultValue() {
+    public PORISValue getDefaultValue() {
         return defaultValue;
     }
 
@@ -91,7 +91,7 @@ public class PORISMode extends PORIS {
      * 
      * @param defaultValue
      */
-    public void setDefaultValue(Value defaultValue) {
+    public void setDefaultValue(PORISValue defaultValue) {
         if (this.defaultValue != defaultValue) {
             this.defaultValue = defaultValue;
             notifyObs();
@@ -127,7 +127,7 @@ public class PORISMode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getValues() {
-        return getFromListByClass(this.destinations, Value.class);
+        return getFromListByClass(this.destinations, PORISValue.class);
     }
 
     /**
@@ -149,10 +149,10 @@ public class PORISMode extends PORIS {
      * @param name
      * @return
      */
-    public Value getValueFromName(String name) {
+    public PORISValue getValueFromName(String name) {
         for (int i = 0; i < this.getValues().size(); i++) {
             if (this.getValues().get(i).getName().equals(name)) {
-                return (Value) this.getValues().get(i);
+                return (PORISValue) this.getValues().get(i);
             }
         }
         return null;
@@ -168,9 +168,9 @@ public class PORISMode extends PORIS {
                 this.getDefaultSubMode() == null) {
             this.defaultSubMode = (PORISMode) child;
         } else {
-            if (child.isDescendantOf(Value.class) &&
+            if (child.isDescendantOf(PORISValue.class) &&
                     this.getDefaultValue() == null) {
-                this.defaultValue = (Value) child;
+                this.defaultValue = (PORISValue) child;
             }
         }
         super.addDestination(child);
@@ -188,7 +188,7 @@ public class PORISMode extends PORIS {
         //System.out.println("Ejecuto el codigo ValueDoubleRange.loadFromXML()");
         String defVal = getChildNodeWithName(node, "default-value-id").getTextContent();
         if (defVal != null) {
-            Value newVal = (Value) xmlLoaderHashMap.get(defVal);
+            PORISValue newVal = (PORISValue) xmlLoaderHashMap.get(defVal);
             if (newVal != null) {
                 this.setDefaultValue(newVal);
             }

@@ -80,7 +80,7 @@ public class PORISNode extends PORIS {
      * 
      * @param v
      */
-    public void addValue(Value v) {
+    public void addValue(PORISValue v) {
         this.addDestination(v);
     }
     
@@ -113,7 +113,7 @@ public class PORISNode extends PORIS {
      * @return
      */
     public ArrayList<PORIS> getValues() {
-        return this.getFromListByClass(this.destinations, Value.class);
+        return this.getFromListByClass(this.destinations, PORISValue.class);
     }
 
     /**
@@ -135,10 +135,10 @@ public class PORISNode extends PORIS {
      * @param name
      * @return
      */
-    public Value getValueFromName(String name) {
+    public PORISValue getValueFromName(String name) {
         for (int i=0;i<this.getValues().size();i++) {
             if (this.getValues().get(i).getName().equals(name)) {
-                return (Value)this.getValues().get(i);
+                return (PORISValue)this.getValues().get(i);
             }
         }
         return null;

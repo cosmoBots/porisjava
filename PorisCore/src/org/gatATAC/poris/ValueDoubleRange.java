@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
  *
  * @author txinto
  */
-public class ValueDoubleRange extends Value implements ValueDataInterface<Double> {
+public class ValueDoubleRange extends PORISValue implements ValueDataInterface<Double> {
 
     private Double min, max, defaultValue;
 
@@ -115,7 +115,7 @@ public class ValueDoubleRange extends Value implements ValueDataInterface<Double
      * @return
      */
     @Override
-    public Value getValueForString(String name) {
+    public PORISValue getValueForString(String name) {
         if (this.isValidFromStr(name)) {
             return new ValueDoubleRange(name, this.defaultValue, this.min, this.max);
         }
