@@ -26,8 +26,8 @@ public class ValueArcSecFormatter extends ValueDoubleFormatter{
      * @param label
      * @param id
      */
-    public ValueArcSecFormatter(String name, String label, int id) {
-        super(name, label, id);
+    public ValueArcSecFormatter(String name, int id, String label) {
+        super(name, id, label);
     }
 
     /**

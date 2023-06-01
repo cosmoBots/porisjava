@@ -28,8 +28,8 @@ public class ValueDMSFormatter extends ValueDoubleFormatter {
      * @param label
      * @param id
      */
-    public ValueDMSFormatter(String name, String label, int id) {
-        super(name, label, id);
+    public ValueDMSFormatter(String name, int id, String label) {
+        super(name, id, label);
     }
     @Override
     public double getValue(String strValue) {

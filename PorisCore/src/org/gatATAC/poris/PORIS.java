@@ -259,6 +259,23 @@ public class PORIS extends Model {
 
     /**
      * 
+     * @param id
+     * @return
+     */
+    public static PORIS getInstanceForId(int id) {
+        PORIS ret = null;
+
+        for (int i = 0; i < instanceList.size(); i++) {
+            if (instanceList.get(i).getId()==id) {
+                ret = instanceList.get(i);
+            }
+        }
+
+        return ret;
+    }    
+    
+    /**
+     * 
      * @return
      */
     public boolean isConsistent() {
@@ -399,7 +416,7 @@ public class PORIS extends Model {
      * @param instanceName
      * @return
      */
-    public static PORIS getPORISInstance(Class<?> clase, String instanceName) {
+    public static PORIS createInstanceOfClass(Class<?> clase, String instanceName) {
         Class<?>[] intArgsClass = new Class[]{String.class};
         Object[] intArgs = new Object[]{instanceName};
         Constructor<?> intArgsConstructor;
@@ -569,7 +586,7 @@ public class PORIS extends Model {
      * @return
      */
     public static PORIS fromXML(Class<?> clase, Node node) {
-        PORIS ret = getPORISInstance(clase, "idle");
+        PORIS ret = createInstanceOfClass(clase, "idle");
         if (ret.loadFromXML(node)) {
             return ret;
         } else {
@@ -583,7 +600,11 @@ public class PORIS extends Model {
      * @param node
      * @param clase
      * @return
-     */
+
+    NOTE: THIS FUNCTION IS NOT BEING USED
+    IT HAS NOT BEEN PORTED TO PYTHON CODE
+    II IS KEPT AS COMMENTED OUT FOR REFERENCE
+
     public static PORIS getBaseModelFromNodeAndClassName(
             Node node, String clase) {
         PORIS ret = null;
@@ -624,4 +645,5 @@ public class PORIS extends Model {
 
         return ret;
     }
+         */
 }

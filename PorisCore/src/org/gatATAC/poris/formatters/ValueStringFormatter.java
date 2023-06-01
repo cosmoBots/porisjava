@@ -25,8 +25,8 @@ public class ValueStringFormatter extends ValueFormatter{
      * @param label
      * @param id
      */
-    public ValueStringFormatter(String name, String label, int id) {
-        super(name, label, id);
+    public ValueStringFormatter(String name, int id, String label) {
+        super(name, id, label);
     }
     /**
      * 

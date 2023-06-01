@@ -49,7 +49,7 @@ public class PORISValue extends PORIS {
         // PORISValue Formatter Id
         String instanceFormatterId = Utils.getTextContent((Element) getChildNodeWithName(node, "value-formatter-id"));
         if (instanceFormatterId != null) {
-            this.formatter = ValueFormatter.getFormatterForId(Integer.parseInt(instanceFormatterId));
+            this.formatter = ValueFormatter.getInstanceForId(Integer.parseInt(instanceFormatterId));
         }
         //System.out.println("Ejecuto el codigo PORISValue.loadFromXML()");
         return ret;
@@ -107,6 +107,7 @@ public class PORISValue extends PORIS {
      */
     public void setDescription(String description) {
         this.description = description;
+        this.notifyObs();
     }
 
     @Override

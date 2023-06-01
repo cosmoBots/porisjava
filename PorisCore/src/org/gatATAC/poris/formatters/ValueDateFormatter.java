@@ -56,8 +56,8 @@ public class ValueDateFormatter extends ValueFormatter {
      * @param label
      * @param id
      */
-    public ValueDateFormatter(String name, String label, int id) {
-        super(name, label, id);
+    public ValueDateFormatter(String name, int id, String label) {
+        super(name, id, label);
         this.dateFormatString = label;
         this.normalFormat = new SimpleDateFormat(this.dateFormatString);
         this.normalFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -69,7 +69,7 @@ public class ValueDateFormatter extends ValueFormatter {
      * @param id
      */
     public ValueDateFormatter(String name, int id) {
-        super(name, defaultDateFormatString, id);
+        super(name, id, defaultDateFormatString);
         this.dateFormatString = defaultDateFormatString;
         this.normalFormat = defaultNormalFormat;
         this.normalFormat.setTimeZone(TimeZone.getTimeZone("UTC"));

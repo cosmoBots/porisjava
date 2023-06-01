@@ -21,8 +21,8 @@ public class ValueArcMinFormatter extends ValueDoubleFormatter{
      * @param label
      * @param id
      */
-    public ValueArcMinFormatter(String name, String label, int id) {
-        super(name, label, id);
+    public ValueArcMinFormatter(String name, int id, String label) {
+        super(name, id, label);
     }
 
     /**

@@ -30,8 +30,8 @@ public class ValueHMSFormatter extends ValueDoubleFormatter{
      * @param label
      * @param id
      */
-    public ValueHMSFormatter(String name, String label, int id) {
-        super(name, label, id);
+    public ValueHMSFormatter(String name, int id, String label) {
+        super(name, id, label);
     }
 
     @Override

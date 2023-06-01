@@ -33,23 +33,23 @@ public class PorisAppDelegate {
     /**
      * 
      */
-    public static ValueDoubleFormatter DEFAULT_DOUBLE_FORMATTER = new ValueDoubleFormatter("real", "real", 1);
+    public static ValueDoubleFormatter DEFAULT_DOUBLE_FORMATTER = new ValueDoubleFormatter("real", 1, "real");
     /**
      * 
      */
-    public static ValueDoubleFormatter ANGLE_FORMATTER = new ValueDoubleFormatter("angle", "angle", 4);
+    public static ValueDoubleFormatter ANGLE_FORMATTER = new ValueDoubleFormatter("angle", 4, "angle");
     /**
      * 
      */
-    public static ValueDoubleFormatter S_FORMATTER = new ValueDoubleFormatter("s", "s", 5);
+    public static ValueDoubleFormatter S_FORMATTER = new ValueDoubleFormatter("s", 5, "s");
     /**
      * 
      */
-    public static ValueDateFormatter DEFAULT_DATE_FORMATTER = new ValueDateFormatter("Date", "dd.MM.yyyy HH:mm:ss z", 6);
+    public static ValueDateFormatter DEFAULT_DATE_FORMATTER = new ValueDateFormatter("Date", 6, "dd.MM.yyyy HH:mm:ss z");
     /**
      * 
      */
-    public static ValueIntegerFormatter DEFAULT_INTEGER_FORMATTER = new ValueIntegerFormatter("integer", "#", 7);
+    public static ValueIntegerFormatter DEFAULT_INTEGER_FORMATTER = new ValueIntegerFormatter("integer", 7, "#");
     /**
      * 
      */

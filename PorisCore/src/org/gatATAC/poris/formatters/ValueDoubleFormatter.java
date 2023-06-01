@@ -25,8 +25,8 @@ public class ValueDoubleFormatter extends ValueFormatter{
      * @param label
      * @param id
      */
-    public ValueDoubleFormatter(String name, String label, int id) {
-        super(name, label, id);
+    public ValueDoubleFormatter(String name, int id, String label) {
+        super(name, id, label);
     }
     /**
      * 
