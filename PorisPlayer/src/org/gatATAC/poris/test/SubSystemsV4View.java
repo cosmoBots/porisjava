@@ -380,13 +380,13 @@ public class SubSystemsV4View extends FrameView {
         s = GenCode.load();
         ArrayList aux = new ArrayList();
         if (s.subTree(aux)) {
-            sLib.addSNodes(aux);
+            sLib.addPORISItems(aux);
             // XML output
             this.loadModelIntoResult(sLib, "Modelo de " + s, cfgXMLFrame.mainPanel, cfgXMLFrame.resultPanel, 1);
             c = new Cfg((PORISNode) s);
             aux.clear();
             if (c.subTree(aux)) {
-                cLib.addSNodes(aux);
+                cLib.addPORISItems(aux);
                 this.loadModelIntoResult(cLib, "Configuracion de " + c, cfgXMLCfgFrame.mainPanel, cfgXMLCfgFrame.resultPanel, 1);
                 loadCfgIntoGUI((Cfg) c, "Configuración de " + c, cfgFrame.mainPanel, cfgFrame.resultPanel);
             }
@@ -419,7 +419,7 @@ public class SubSystemsV4View extends FrameView {
             c = new Cfg(((PORISNode) s));
             ArrayList<PORIS> aux = new ArrayList();
             if (c.subTree(aux)) {
-                cLib.addSNodes(aux);
+                cLib.addPORISItems(aux);
                 this.loadModelIntoResult(cLib, "Configuracion de " + c, cfgXMLCfgFrame.mainPanel, cfgXMLCfgFrame.resultPanel, 1);
             }
             loadCfgIntoGUI((Cfg) c, "Configuración de " + c, cfgFrame.mainPanel, cfgFrame.resultPanel);

@@ -158,7 +158,7 @@ public class PorisAppDelegate {
             config = new Cfg(system);
             ArrayList<PORIS> aux = new ArrayList();
             if (config.subTree(aux)) {
-                configLib.addSNodes(aux);
+                configLib.addPORISItems(aux);
             }
         } catch (Exception exc) {
             System.err.println("PorisAppDeletage.initialization [" + exc.getLocalizedMessage() + "]");

@@ -317,9 +317,9 @@ public class PORIS extends Model {
                     labelNode.appendChild(labelNameNode);
                     // Scope
                     Element labelScopeNode = doc.createElement("scope-kind");
-                    Element labelScopeOPMSNode = doc.createElement("name");
-                    Utils.setTextContent(doc, labelScopeOPMSNode, "CfgPanel");
-                    labelScopeNode.appendChild(labelScopeOPMSNode);
+                    Element labelScopeCfgPanelNode = doc.createElement("name");
+                    Utils.setTextContent(doc, labelScopeCfgPanelNode, "CfgPanel");
+                    labelScopeNode.appendChild(labelScopeCfgPanelNode);
                     labelNode.appendChild(labelScopeNode);
 
                     labelsNode.appendChild(labelNode);
@@ -359,7 +359,7 @@ public class PORIS extends Model {
         } else {
             System.err.println("Parece ser que el basemodel " + this + " no es consistente, veamos a ver...");
             System.err.flush();
-            System.err.println("El SNode tiene los siguientes destinos: " + destinations);
+            System.err.println("El PORIS tiene los siguientes destinos: " + destinations);
             for (int i = 0; i < this.destinations.size(); i++) {
                 System.err.print("El valor " + this.destinations.get(i) + "es consistente?: " + this.destinations.get(i).isConsistent());
             }
@@ -410,16 +410,16 @@ public class PORIS extends Model {
             try {
                 return (PORIS) intArgsConstructor.newInstance(intArgs);
             } catch (InstantiationException e) {
-                System.err.println("SNode.getSNodeInstance"+e.getLocalizedMessage());
+                System.err.println("PORIS.getSNodeInstance"+e.getLocalizedMessage());
             } catch (IllegalAccessException e) {
-                System.err.println("SNode.getSNodeInstance"+e.getLocalizedMessage());
+                System.err.println("PORIS.getSNodeInstance"+e.getLocalizedMessage());
             } catch (IllegalArgumentException e) {
-                System.err.println("SNode.getSNodeInstance"+e.getLocalizedMessage());
+                System.err.println("PORIS.getSNodeInstance"+e.getLocalizedMessage());
             } catch (InvocationTargetException e) {
-                System.err.println("SNode.getSNodeInstance"+e.getLocalizedMessage());
+                System.err.println("PORIS.getSNodeInstance"+e.getLocalizedMessage());
             }
         } catch (NoSuchMethodException e) {
-            System.err.println("SNode.getSNodeInstance"+e.getLocalizedMessage());
+            System.err.println("PORIS.getSNodeInstance"+e.getLocalizedMessage());
         }
         return null;
     }
@@ -573,7 +573,7 @@ public class PORIS extends Model {
         if (ret.loadFromXML(node)) {
             return ret;
         } else {
-            System.err.println("It was impossible to create the SNode from the given XML node");
+            System.err.println("It was impossible to create the PORIS from the given XML node");
             return null;
         }
     }

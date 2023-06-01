@@ -69,7 +69,7 @@ public class PORISLib extends Model {
      * 
      * @param items
      */
-    public void addSNodes(ArrayList<PORIS> items) {
+    public void addPORISItems(ArrayList<PORIS> items) {
         for (int i = 0; i < items.size(); i++) {
             this.nodeList.add(items.get(i));
         }

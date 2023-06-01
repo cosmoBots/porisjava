@@ -22,7 +22,7 @@ public class CommandLineTest {
         PORISNode s=GenCode.load();
         ArrayList<PORIS> aux = new ArrayList();
         if (s.subTree(aux)) {
-            sLib.addSNodes(aux);
+            sLib.addPORISItems(aux);
         }
 
         // XML output
