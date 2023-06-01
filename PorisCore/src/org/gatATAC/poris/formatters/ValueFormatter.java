@@ -22,7 +22,7 @@ public abstract class ValueFormatter {
      * @param name
      * @return
      */
-    public static ValueFormatter getFormatterForName(String name) {
+    public static ValueFormatter getInstance(String name) {
         ValueFormatter ret = null;
 
         for (int i = 0; i < instanceList.size(); i++) {
@@ -39,7 +39,7 @@ public abstract class ValueFormatter {
      * @param id
      * @return
      */
-    public static ValueFormatter getFormatterForId(int id) {
+    public static ValueFormatter getInstanceForId(int id) {
         ValueFormatter ret = null;
 
         for (int i = 0; i < instanceList.size(); i++) {
@@ -69,7 +69,7 @@ public abstract class ValueFormatter {
      * @param label
      * @param id
      */
-    public ValueFormatter(String name, String label, int id) {
+    public ValueFormatter(String name, int id, String label) {
         this(name,id);
         this.label = label;
         instanceList.add(this);
