@@ -580,40 +580,6 @@ public class PORIS extends Model {
 
     /**
      * 
-     * @param clase
-     * @param name
-     * @return
-     */
-    public static PORIS createInstanceFromClass(
-            Class<?> clase, String name) {
-        Class<?>[] intArgsClass = new Class[]{clase};
-        Constructor<?> intArgsConstructor;
-
-        try {
-            intArgsConstructor = clase.getConstructor(intArgsClass);
-            Object[] intArgs = new Object[]{name};
-
-            try {
-                return (PORIS) intArgsConstructor.newInstance(intArgs);
-            } catch (InstantiationException e) {
-                System.err.println(e.getLocalizedMessage());
-            } catch (IllegalAccessException e) {
-                System.err.println(e.getLocalizedMessage());
-            } catch (IllegalArgumentException e) {
-                System.err.println(e.getLocalizedMessage());
-            } catch (InvocationTargetException e) {
-                System.err.println(e.getLocalizedMessage());
-            }
-
-        } catch (NoSuchMethodException e) {
-            System.err.println("BaseModel.createInstanceFromClass: " + e.getLocalizedMessage());
-        }
-
-        return new PORIS(name);
-    }
-
-    /**
-     * 
      * @param node
      * @param clase
      * @return
