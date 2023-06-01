@@ -68,7 +68,7 @@
     <label>
       <name>2x1 (horiz x vert)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -85,7 +85,7 @@
     <label>
       <name>1x2 (horiz x vert)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -205,7 +205,7 @@
     <label>
       <name>SLOW (50KHz)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -222,7 +222,7 @@
     <label>
       <name>NORMAL (200KHz)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -239,7 +239,7 @@
     <label>
       <name>FAST (500KHz)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -473,7 +473,7 @@
     <label>
       <name>Normal</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>

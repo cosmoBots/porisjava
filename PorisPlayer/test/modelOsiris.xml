@@ -69,7 +69,7 @@
     <label>
       <name>2x1 (horiz x vert)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -86,7 +86,7 @@
     <label>
       <name>1x2 (horiz x vert)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -206,7 +206,7 @@
     <label>
       <name>SLOW (50KHz)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -223,7 +223,7 @@
     <label>
       <name>NORMAL (200KHz)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -240,7 +240,7 @@
     <label>
       <name>FAST (500KHz)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -474,7 +474,7 @@
     <label>
       <name>Normal</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -602,7 +602,7 @@
     <label>
       <name>Broad</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -621,7 +621,7 @@
     <label>
       <name>No Filter</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -982,7 +982,7 @@
     <label>
       <name>Order</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1032,7 +1032,7 @@
     <label>
       <name>User</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1147,7 +1147,7 @@
     <label>
       <name>[SBBI] Broad Band Imaging</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1610,7 +1610,7 @@
     <label>
       <name>LongSlit 0.4 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1627,7 +1627,7 @@
     <label>
       <name>LongSlit 0.6 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1644,7 +1644,7 @@
     <label>
       <name>LongSlit 0.8 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1661,7 +1661,7 @@
     <label>
       <name>LongSlit 1.0 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1678,7 +1678,7 @@
     <label>
       <name>LongSlit 1.2 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1695,7 +1695,7 @@
     <label>
       <name>LongSlit 1.5 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1712,7 +1712,7 @@
     <label>
       <name>LongSlit 1.8 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1729,7 +1729,7 @@
     <label>
       <name>LongSlit 2.0 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1746,7 +1746,7 @@
     <label>
       <name>LongSlit 2.5 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1763,7 +1763,7 @@
     <label>
       <name>LongSlit 5.0 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1780,7 +1780,7 @@
     <label>
       <name>LongSlit 3.0 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1797,7 +1797,7 @@
     <label>
       <name>LongSlit 3.5 arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1912,7 +1912,7 @@
     <label>
       <name>[SLSS] Long Slit Spectroscopy</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2006,7 +2006,7 @@
     <label>
       <name>No Mask</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2023,7 +2023,7 @@
     <label>
       <name>Half Field Mask</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2040,7 +2040,7 @@
     <label>
       <name>Charge Shuffling 1/3 FOV</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2177,7 +2177,7 @@
     <label>
       <name>[STFS] Standard Tunable Filter Imaging</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2293,7 +2293,7 @@
     <label>
       <name>Fast Photometry Mask</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2310,7 +2310,7 @@
     <label>
       <name>Frame Transfer Mask</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2414,13 +2414,13 @@
     <label>
       <name>[CBSB] All Modes Bias</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
     <label>
       <name>[CBSB] All Modes Bias</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2449,7 +2449,7 @@
     <label>
       <name>[CFFD] Dome FlatFields</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2478,7 +2478,7 @@
     <label>
       <name>[CFFS] Twilight FlatFields</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2516,7 +2516,7 @@
     <label>
       <name>[CTFD] TF Dome Flatfield</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2554,7 +2554,7 @@
     <label>
       <name>[CTFS] TF Twilight Flatfield</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2592,7 +2592,7 @@
     <label>
       <name>[CTFW] TF Wavelength Calibration on the Sky</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2627,7 +2627,7 @@
     <label>
       <name>[CLSW] Longslit Wavelength Calibration</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2662,7 +2662,7 @@
     <label>
       <name>[CLSD] Longslit Dome Flatfield</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2697,7 +2697,7 @@
     <label>
       <name>[CLSS] Longslit Twilight Flatfield</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2735,7 +2735,7 @@
     <label>
       <name>[STFN] N-Shuffle Tunable Filter Imaging</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2773,7 +2773,7 @@
     <label>
       <name>[STSL] Straddling Line Tunable Filter Imaging</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2808,7 +2808,7 @@
     <label>
       <name>[SMOS] Standard Multiple Object Spectroscopy</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2843,7 +2843,7 @@
     <label>
       <name>[SMNS] Nod &amp; Shuffle Multiple Object Spectroscopy</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -2878,7 +2878,7 @@
     <label>
       <name>[SMSH] Micro-Shuffle Multiple Object Spectroscopy</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3026,7 +3026,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3058,7 +3058,7 @@
     <label>
       <name>Imaging</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3090,7 +3090,7 @@
     <label>
       <name>Spectroscopy</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3128,7 +3128,7 @@
     <label>
       <name>Imaging</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3160,7 +3160,7 @@
     <label>
       <name>Spectroscopy</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3194,7 +3194,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3220,7 +3220,7 @@
     <label>
       <name>Scientific Modes</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3246,7 +3246,7 @@
     <label>
       <name>Calibration Modes</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3274,7 +3274,7 @@
     <label>
       <name>Osiris</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>

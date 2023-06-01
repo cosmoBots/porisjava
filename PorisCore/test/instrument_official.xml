@@ -12,7 +12,7 @@
     <label>
       <name>2.0 arcsecs</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -30,7 +30,7 @@
     <label>
       <name>0.6 arcsecs</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -48,7 +48,7 @@
     <label>
       <name>1.0 arcsecs</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -77,7 +77,7 @@
     <label>
       <name>All</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -108,7 +108,7 @@
     <label>
       <name>Masks</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -126,7 +126,7 @@
     <label>
       <name>Red</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -144,7 +144,7 @@
     <label>
       <name>Blue</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -170,7 +170,7 @@
     <label>
       <name>All</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -189,7 +189,7 @@
     <label>
       <name>None</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -220,7 +220,7 @@
     <label>
       <name>Filters</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -238,7 +238,7 @@
     <label>
       <name>R500</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -256,7 +256,7 @@
     <label>
       <name>R1000</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -274,7 +274,7 @@
     <label>
       <name>R2000</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -303,7 +303,7 @@
     <label>
       <name>All</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -334,7 +334,7 @@
     <label>
       <name>Dispersion</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -352,7 +352,7 @@
     <label>
       <name>1x1</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -370,7 +370,7 @@
     <label>
       <name>2x1</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -388,7 +388,7 @@
     <label>
       <name>1x2</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -406,7 +406,7 @@
     <label>
       <name>2x2</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -438,7 +438,7 @@
     <label>
       <name>All</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -464,7 +464,7 @@
     <label>
       <name>Square</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -501,7 +501,7 @@
     <label>
       <name>Binning</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -538,7 +538,7 @@
     <label>
       <name>Normal</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -563,7 +563,7 @@
     <label>
       <name>Exposure Time</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -589,7 +589,7 @@
     <label>
       <name>Normal</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -615,7 +615,7 @@
     <label>
       <name>Square Binning</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -646,7 +646,7 @@
     <label>
       <name>Detector</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -675,7 +675,7 @@
     <label>
       <name>Photometry</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -710,7 +710,7 @@
     <label>
       <name>Spectroscopy</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -747,7 +747,7 @@
     <label>
       <name>Test Instrument</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>

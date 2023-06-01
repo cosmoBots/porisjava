@@ -318,7 +318,7 @@ public class PORIS extends Model {
                     // Scope
                     Element labelScopeNode = doc.createElement("scope-kind");
                     Element labelScopeOPMSNode = doc.createElement("name");
-                    Utils.setTextContent(doc, labelScopeOPMSNode, "OPMS");
+                    Utils.setTextContent(doc, labelScopeOPMSNode, "CfgPanel");
                     labelScopeNode.appendChild(labelScopeOPMSNode);
                     labelNode.appendChild(labelScopeNode);
 
@@ -399,7 +399,7 @@ public class PORIS extends Model {
      * @param instanceName
      * @return
      */
-    public static PORIS getSNodeInstance(Class<?> clase, String instanceName) {
+    public static PORIS getPORISInstance(Class<?> clase, String instanceName) {
         Class<?>[] intArgsClass = new Class[]{String.class};
         Object[] intArgs = new Object[]{instanceName};
         Constructor<?> intArgsConstructor;
@@ -509,7 +509,7 @@ public class PORIS extends Model {
                     if (scopeNode != null) {
                         Node scopeNameNode = getChildNodeWithName(scopeNode, "name");
                         String scopeName = Utils.getTextContent((Element) scopeNameNode);
-                        if (scopeName.equals("OPMS")) {
+                        if (scopeName.equals("CfgPanel")) {
                             this.setLabel(Utils.getTextContent((Element) getChildNodeWithName(labelNode, "name")));
                         }
                     }
@@ -569,7 +569,7 @@ public class PORIS extends Model {
      * @return
      */
     public static PORIS fromXML(Class<?> clase, Node node) {
-        PORIS ret = getSNodeInstance(clase, "idle");
+        PORIS ret = getPORISInstance(clase, "idle");
         if (ret.loadFromXML(node)) {
             return ret;
         } else {

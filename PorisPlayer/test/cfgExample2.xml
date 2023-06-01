@@ -30,7 +30,7 @@
             <label>
                 <name>Orientation</name>
                 <scope-kind>
-                    <name>OPMS</name>
+                    <name>CfgPanel</name>
                 </scope-kind>
             </label>
         </labels>
@@ -67,7 +67,7 @@
             <label>
                 <name>lambda(Å)</name>
                 <scope-kind>
-                    <name>OPMS</name>
+                    <name>CfgPanel</name>
                 </scope-kind>
             </label>
         </labels>
@@ -84,7 +84,7 @@
             <label>
                 <name>fwhm(Å)</name>
                 <scope-kind>
-                    <name>OPMS</name>
+                    <name>CfgPanel</name>
                 </scope-kind>
             </label>
         </labels>

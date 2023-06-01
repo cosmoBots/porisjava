@@ -3727,7 +3727,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3764,7 +3764,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3801,7 +3801,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3838,7 +3838,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3875,7 +3875,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3912,7 +3912,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3949,7 +3949,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -3986,7 +3986,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -4039,7 +4039,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -4092,7 +4092,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -4145,7 +4145,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -4198,7 +4198,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -4251,7 +4251,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -4304,7 +4304,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -4357,7 +4357,7 @@
     <label>
       <name>-</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>

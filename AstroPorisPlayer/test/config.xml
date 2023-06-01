@@ -46,7 +46,7 @@
     <label>
       <name>First Name</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -99,7 +99,7 @@
     <label>
       <name>Surname</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -146,7 +146,7 @@
     <label>
       <name>Principal Investigator</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -201,7 +201,7 @@
     <label>
       <name>Minimum Fiducial Slits</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -304,7 +304,7 @@
     <label>
       <name>Hour Angle</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -351,7 +351,7 @@
     <label>
       <name>Date System</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -369,7 +369,7 @@
     <label>
       <name>Don't check</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -387,7 +387,7 @@
     <label>
       <name>Check</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -434,7 +434,7 @@
     <label>
       <name>Check spectra overlap?</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -489,7 +489,7 @@
     <label>
       <name>Maximum masks</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -542,7 +542,7 @@
     <label>
       <name>Pre-imaging FITS File</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -656,7 +656,7 @@
     <label>
       <name>0&#186;</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -674,7 +674,7 @@
     <label>
       <name>90&#186;</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -773,7 +773,7 @@
     <label>
       <name>Orientation</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -824,7 +824,7 @@
     <label>
       <name>0&#186;</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -853,7 +853,7 @@
     <label>
       <name>90&#186;</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -906,7 +906,7 @@
     <label>
       <name>Don't use it (catalog)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -929,7 +929,7 @@
     <label>
       <name>Use a pre-imaging file</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -952,7 +952,7 @@
     <label>
       <name>Don't use it (catalog)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -975,7 +975,7 @@
     <label>
       <name>Don't use it (catalog)</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1012,7 +1012,7 @@
     <label>
       <name>Use Pre-imaging?</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1065,7 +1065,7 @@
     <label>
       <name>Observation ID</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1116,7 +1116,7 @@
     <label>
       <name>Arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1139,7 +1139,7 @@
     <label>
       <name>Arcmin</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1170,7 +1170,7 @@
     <label>
       <name>RA</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1207,7 +1207,7 @@
     <label>
       <name>Arcmin</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1244,7 +1244,7 @@
     <label>
       <name>Arcsec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1275,7 +1275,7 @@
     <label>
       <name>Dec</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1328,7 +1328,7 @@
     <label>
       <name>Telescope Offset</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1455,7 +1455,7 @@
     <label>
       <name>Observation Details</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
@@ -1496,7 +1496,7 @@
     <label>
       <name>Preferences</name>
       <scope-kind>
-        <name>OPMS</name>
+        <name>CfgPanel</name>
       </scope-kind>
     </label>
   </labels>
