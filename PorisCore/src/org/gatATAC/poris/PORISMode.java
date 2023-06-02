@@ -5,6 +5,7 @@
 package org.gatATAC.poris;
 
 import java.util.ArrayList;
+import org.gatATAC.XML.Utils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -40,6 +41,16 @@ public class PORISMode extends PORIS {
     public Element toXML(Document doc, Class tagClass, boolean onlyIdent) {
         Element ret = super.toXML(doc, tagClass, onlyIdent);
         if (!onlyIdent) {
+            if (this.getDefaultSubMode() != null) {
+                Element defaultSubModeNode = doc.createElement("default-mode-id");
+                Utils.setTextContent(doc, defaultSubModeNode, Integer.toString(this.getDefaultSubMode().getId()));
+                ret.appendChild(defaultSubModeNode);
+            }
+            if (this.getDefaultValue() != null) {
+                Element defaultValueNode = doc.createElement("default-value-id");
+                Utils.setTextContent(doc, defaultValueNode, Integer.toString(this.getDefaultValue().getId()));
+                ret.appendChild(defaultValueNode);
+            }
         }
         return ret;
     }
@@ -164,12 +175,12 @@ public class PORISMode extends PORIS {
      */
     @Override
     public void addDestination(PORIS child) {
-        if (child.isDescendantOf(PORISMode.class) &&
-                this.getDefaultSubMode() == null) {
+        if (child.isDescendantOf(PORISMode.class)
+                && this.getDefaultSubMode() == null) {
             this.defaultSubMode = (PORISMode) child;
         } else {
-            if (child.isDescendantOf(PORISValue.class) &&
-                    this.getDefaultValue() == null) {
+            if (child.isDescendantOf(PORISValue.class)
+                    && this.getDefaultValue() == null) {
                 this.defaultValue = (PORISValue) child;
             }
         }
