@@ -5,6 +5,7 @@
 package org.gatATAC.poris;
 
 import java.util.ArrayList;
+import org.gatATAC.XML.Utils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -193,7 +194,11 @@ public class PORISNode extends PORIS {
     public Element toXML (Document doc, Class tagClass, boolean onlyIdent) {
         Element ret=super.toXML(doc, tagClass, onlyIdent);
         if (!onlyIdent) {
-
+            if (this.getDefaultMode() != null) {
+                Element defaultModeNode = doc.createElement("default-mode-id");
+                Utils.setTextContent(doc, defaultModeNode, Integer.toString(this.getDefaultMode().getId()));
+                ret.appendChild(defaultModeNode);
+            }
         }
         return ret;
     }
