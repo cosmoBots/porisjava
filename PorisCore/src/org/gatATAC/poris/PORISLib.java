@@ -62,7 +62,11 @@ public class PORISLib extends Model {
      * @return
      */
     public PORIS last() {
-        return this.nodeList.get(nodeList.size() - 1);
+        if (nodeList.size() > 0){
+            return this.nodeList.get(nodeList.size() - 1);
+        } else {
+            return null;
+        }
     }
 
     /**
@@ -86,9 +90,10 @@ public class PORISLib extends Model {
         NodeList instanceNodes = node.getChildNodes();
 
         for (int i = 0; i < instanceNodes.getLength(); i++) {
-            String instanceNodeName = instanceNodes.item(i).getNodeName();
-            //System.out.println("Compruebo el child " + instanceNodeName);
             Node instanceNode = instanceNodes.item(i);
+            String instanceNodeName = instanceNode.getNodeName();
+            //System.out.println("Compruebo el child " + instanceNodeName);
+
             System.out.println("Hola!"+instanceNode);
             Node instanceTypeNode = PORIS.getChildNodeWithName(instanceNode, "type");
             if (instanceTypeNode != null) {
@@ -100,7 +105,7 @@ public class PORISLib extends Model {
                     /* Parche, intentar que no haya que poner el path a mano */
                     Class nodeClass = Class.forName("org.gatATAC.poris." + instanceClassName);
                     if (nodeClass != null) {
-                        PORIS instance = PORIS.fromXML(nodeClass, instanceNodes.item(i));
+                        PORIS instance = PORIS.fromXML(nodeClass, instanceNode);
                         if (instance != null) {
                             nodeList.add(instance);
                             System.out.println("Cargué perfectamente " + instanceNodeName);
