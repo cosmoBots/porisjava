@@ -6,8 +6,9 @@ This repository contains the Java classes of PORIS.
 
 ## Getting up and running
 
-TODO
+Netbeans 7.0.1 is needed to compile this project.
 
 ## Deploying and running in production
 
-TODO
+`java -jar AstroPorisPlayer.jar [inputfile.xml]`
+
