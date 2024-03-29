@@ -447,7 +447,7 @@ public class SubSystemsV4View extends FrameView {
                 }
                 loadCfgIntoGUI((Cfg) c, "Configuración de " + c, cfgFrame.mainPanel, cfgFrame.resultPanel);
             } else {
-                System.err.println("Error! no se ha podido cargar la librería desde el XML")
+                System.err.println("Error! no se ha podido cargar la librería desde el XML");
             }
 
         } catch (Exception exc) {
