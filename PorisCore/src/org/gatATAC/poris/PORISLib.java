@@ -100,7 +100,18 @@ public class PORISLib extends Model {
                 //System.out.println("Tiene el atributo type!!!" + instanceTypeNode);
                 String instanceClassName = instanceTypeNode.getTextContent();
                 System.out.println("Tiene atributos!!! La clase es " + instanceClassName);
-                System.out.println("Hola!"+instanceClassName);
+                if (instanceClassName.equals("PORISParam"))
+                {
+                    instanceClassName = "PORISNode";
+                }
+                else
+                {
+                        if (instanceClassName.equals("PORISSys"))
+                        {
+                            instanceClassName = "PORISNode";
+                        }             
+                }    
+                System.out.println("Loading "+instanceClassName);
                 try {
                     /* Parche, intentar que no haya que poner el path a mano */
                     Class nodeClass = Class.forName("org.gatATAC.poris." + instanceClassName);
@@ -113,9 +124,12 @@ public class PORISLib extends Model {
                         } else {
                             System.out.println("Falló la carga de " + instanceNodeName);
                         }
+                    } else {
+                        System.out.println(instanceClassName + " class could not be found");
                     }
+                    
                 } catch (ClassNotFoundException e) {
-                    //System.err.println("Me salto el nodo de clase " + instanceClassName);
+                    System.err.println("Me salto el nodo de clase " + instanceClassName);
                 }
             } else {
                 //System.out.println("Me salto el nodo " + instanceNodeName);
