@@ -111,7 +111,7 @@ public class PORISValueFloat extends PORISValue implements PORISValueData<Double
 
     /**
      * 
-     * @param name
+     * @param value
      * @return
      */
     @Override
@@ -139,7 +139,16 @@ public class PORISValueFloat extends PORISValue implements PORISValueData<Double
      */
     @Override
     public boolean isValidFromStr(String strValue) {
-        return this.isValid(((ValueDoubleFormatter) this.getFormatter()).getValue(strValue));
+        boolean ret = false;
+        try {
+            /* This function may generate an exception, Double.parseDouble
+             * we capture it here to know that we'll have to set the default value
+             */
+            ret = this.isValid(((ValueDoubleFormatter) this.getFormatter()).getValue(strValue));
+        } catch (Exception e) {
+            System.out.println("Exception catch, so the string can not be converted to a Double");
+        }
+        return ret;
     }
 
     /**

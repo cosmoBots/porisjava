@@ -34,6 +34,7 @@ public class ValueDoubleFormatter extends ValueFormatter{
      * @return
      */
     public double getValue(String strValue){
+        /* May raise a exception, which should be captured externally */
         return Double.parseDouble(strValue);
     }
     /**
@@ -51,6 +52,7 @@ public class ValueDoubleFormatter extends ValueFormatter{
      * @return
      */
     public double getValue(String strValue, boolean noSpecificTreatment){
+        /* May raise a exception, which should be captured externally */
         return Double.parseDouble(strValue);
     }
     /**
