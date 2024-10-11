@@ -33,7 +33,7 @@ public class CfgGUIPanel extends javax.swing.JPanel {
     }
 
     private void updateVisibilities() {
-        this.mode.setVisible((this.mode.getModel().getSize() > 1) || (this.gui.getCfg().getModel().isModeVisibleFlag()));
+        this.mode.setVisible((this.mode.getModel().getSize() > 0) || (this.gui.getCfg().getModel().isModeVisibleFlag()));
         this.mode.setEnabled(this.mode.getModel().getSize() > 1);
         this.labelMode.setVisible(this.mode.getModel().getSize() > 1);
         this.label.setVisible(this.showLabel);
